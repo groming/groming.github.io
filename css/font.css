@@ -1,0 +1,47 @@
+/* 字体图标 */
+@font-face {
+  font-family: 'icomoon';
+  src: url('../fonts/icomoon.eot?khg4v2');
+  src: url('../fonts/icomoon.eot?khg4v2#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon.ttf?khg4v2') format('truetype'),
+    url('../fonts/icomoon.woff?khg4v2') format('woff'),
+    url('../fonts/icomoon.svg?khg4v2#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+.my_link ul li:first-child a::before {
+  content: '\ea25';
+  font-family: 'icomoon';
+  color: #fff;
+  font-size: 40px;
+}
+
+.my_link ul li:nth-child(2) a::before {
+  content: '\e914';
+  font-family: 'icomoon';
+  color: #fff;
+  font-size: 40px;
+}
+
+.my_link ul li:nth-child(3) a::before {
+  content: '\ec98';
+  font-family: 'icomoon';
+  color: #fff;
+  font-size: 40px;
+}
+
+.my_link ul li:last-child a::before {
+  content: '\e915';
+  font-family: 'icomoon';
+  color: #fff;
+  font-size: 35px;
+}
+
+.openai_link a::before {
+  content: '\e916';
+  font-family: 'icomoon';
+  color: #ff8bff;
+  font-size: 80px;
+}

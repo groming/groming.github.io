@@ -1,0 +1,74 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* em 和 i 斜体文字不倾斜 */
+em,
+i {
+  font-style: normal
+}
+
+/* 去除 li 的小圆点 */
+li {
+  list-style: none
+}
+
+/* 取消图片底部空白缝隙问题 */
+img {
+  /* border:0;照顾低版本浏览器 如果图片外面包含了链接 会有边框的问题 */
+  border: 0;
+  vertical-align: middle
+}
+
+/* 鼠标经过btn时 光标变为小手 */
+button {
+  cursor: pointer
+}
+
+/* 去除 a 链接默认下划线 */
+a {
+  color: #000;
+  text-decoration: none
+}
+
+/* 设置按钮和表单的字体样式 */
+button,
+input {
+  font-family: Microsoft YaHei, Heiti SC, tahoma, arial, Hiragino Sans GB, "\5B8B\4F53", sans-serif;
+  border: 0;
+  outline: none;
+}
+
+body {
+  /* 抗锯齿性 让文字显示的更加平滑 */
+  -webkit-font-smoothing: antialiased;
+  background-color: #fff;
+  /* "\5B8B\4F53" Unicode 编码字体 把中文字体的名称用相应的Unicode编码来代替 避免浏览器解释css代码出现乱码 */
+  /* 
+    黑体\9ED1\4F53
+    宋体\5B8B\4F53
+    微软雅黑\5FAE\8F6F\96C5\9ED1
+    */
+  font: 12px/1.5 Microsoft YaHei, Heiti SC, tahoma, arial, Hiragino Sans GB, "\5B8B\4F53", sans-serif;
+  color: #666
+}
+
+/* 隐藏 */
+.hide,
+.none {
+  display: none
+}
+
+/* 清除浮动 */
+.clearfix:after {
+  visibility: hidden;
+  clear: both;
+  display: block;
+  content: ".";
+  height: 0
+}
+.clearfix {
+  *zoom: 1
+}
