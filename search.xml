@@ -1,0 +1,388 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title>About</title>
+    <url>/blog/2024/04/01/about/</url>
+    <content><![CDATA[<h2 id="关于我"><a href="#关于我" class="headerlink" title="关于我"></a>关于我</h2><p>Who I’m i?</p>
+<table><tr><td bgcolor=skyBlue>A developer, living all over the world.</td></tr></table>
+
+<hr>
+<p>名前: 劉子旭<br>住居: 中国河南<br>Github: <a href="https://github.com/groming/">Groming</a><br>Twitter: <a href="https://twitter.com/li56253842">Groming</a><br>QQ: <a href="https://qm.qq.com/q/kZTTaJuaFa">Penguin</a><br>Telegram:<a href="https://t.me/grayson_puil">GromingPuil</a><br>Wechat: gromingx</p>
+<span id="more"></span>
+<p><img src="/blog/../images/favicon.png"></p>
+]]></content>
+      <categories>
+        <category>about</category>
+      </categories>
+      <tags>
+        <tag>about</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Linux 基础</title>
+    <url>/blog/2023/09/17/Linux/</url>
+    <content><![CDATA[<h1 id="Linux-命令基础"><a href="#Linux-命令基础" class="headerlink" title="Linux 命令基础"></a>Linux 命令基础</h1><p>Linux 中命令的通用格式:<br>command [-options] [parameter]</p>
+<p>command: 命令本身<br>-options: [可选 非必填] 命令的一些选项 可以通过选项控制命令的行为细节<br>parameter: [可选 非必填] 命令的参数 多数用于命令的指向目标等<br>[] 表示可选</p>
+<span id="more"></span>
+<p>——————–分隔符——————–</p>
+<h1 id="基础命令"><a href="#基础命令" class="headerlink" title="基础命令"></a>基础命令</h1><h2 id="ls-command"><a href="#ls-command" class="headerlink" title="ls command"></a>ls command</h2><p>ls 命令的作用是列出目录下的内容</p>
+<p><code>语法: ls [-a -l -h] [Linux路径]</code></p>
+<p>-a -; -h 是可选的选项<br>Linux 路径是此命令可选的参数<br>-a 表示 all 的意思 即列出全部文件 (包含隐藏的文件&#x2F;文件夹)<br>-l 表示以列表 (竖向排列) 的形式展示内容 并展示更多信息<br>-h 表示以易于阅读的形式 列出文件大小 如 K M G</p>
+<h2 id="cd-command-change-Directory"><a href="#cd-command-change-Directory" class="headerlink" title="cd command [change Directory]"></a>cd command [change Directory]</h2><p><code>语法: cd [linux路径]</code><br>cd 命令无需选项 只有参数 表示要切换到哪个目录下<br>cd 命令直接执行 不写参数 表示回到用户的 Home 目录</p>
+<h2 id="pwd-command-Print-Work-Directory"><a href="#pwd-command-Print-Work-Directory" class="headerlink" title="pwd command [Print Work Directory]"></a>pwd command [Print Work Directory]</h2><p>通过 pwd 命令 来查看当前的工作目录<br>pwd 命令 无选项 无参数</p>
+<p>——————–分隔符——————–</p>
+<h1 id="相对路径和绝对路径"><a href="#相对路径和绝对路径" class="headerlink" title="相对路径和绝对路径"></a>相对路径和绝对路径</h1><p>绝对路径以根目录为起点 描述路径的一种写法 路径描述以 &#x2F; 开头<br>绝对路径写法: cd &#x2F;home&#x2F;groming&#x2F;DeskTop</p>
+<p>相对路径以当前目录为起点 描述路径的一种写法 路径描述无需以 &#x2F; 开头<br>相对路径写法: cd DeskTop</p>
+<p>特殊路径符<br>. 表示当前目录 如 cd .&#x2F;desktop 表示切换到当前目录下的 desktop 目录内 和 cd desktop 效果一致<br>.. 表示上一级目录 如 cd .. 即可切换到上一级目录 cd..&#x2F;.. 切换到上二级目录<br>~ 表示 Home 目录 如 cd ~ 即可切换到 home 目录 或 cd ~desktop 切换到 home 目录内的 desktop 目录</p>
+<p>——————–分隔符——————–</p>
+<h1 id="创建目录命令"><a href="#创建目录命令" class="headerlink" title="创建目录命令"></a>创建目录命令</h1><h2 id="mkdir-command-Make-Directory"><a href="#mkdir-command-Make-Directory" class="headerlink" title="mkdir command [Make Directory]"></a>mkdir command [Make Directory]</h2><p>通过 mkdir 命令可以创建新的目录 (文件夹)<br><code>语法: mkdir [-p] Linux 路径</code><br>参数必填 表示 linux 路径 即要创建的文件夹的路径 相对路径和绝对路径均可<br>-p 选项可选 表示自动创建不存在的父目录 适用于创建连续多层级的目录</p>
+<p>——————–分隔符——————–</p>
+<h1 id="文件操作命令"><a href="#文件操作命令" class="headerlink" title="文件操作命令"></a>文件操作命令</h1><h2 id="touch-command"><a href="#touch-command" class="headerlink" title="touch command"></a>touch command</h2><p>通过 touch 命令创建文件<br><code>语法: touch Linux路径</code><br>touch 命令无选项 参数必填</p>
+<h2 id="cat-command"><a href="#cat-command" class="headerlink" title="cat command"></a>cat command</h2><p>通过 cat 命令查看内容<br><code>语法: cat Linux路径</code><br>cat 命令无选项 参数必填</p>
+<h2 id="more-command"><a href="#more-command" class="headerlink" title="more command"></a>more command</h2><p>more 命令可以查看文件内容 more 支持翻页 如果文件内容过多 可以一页页的展示 按 q 退出<br><code>语法: more Linux路径</code><br>more 命令无选项 参数必填</p>
+<h2 id="cp-command-Copy"><a href="#cp-command-Copy" class="headerlink" title="cp command [Copy]"></a>cp command [Copy]</h2><p>cp 命令用于复制文件&#x2F;文件夹<br><code>语法: cp [-r] 参数1 参数2</code><br>-r 选项 可选 用于复制文件夹使用 表示递归<br>参数1 Linux 路径 表示被复制的文件或文件夹<br>参数2 Linux 路径 表示要复制去的地方</p>
+<h2 id="mv-command-Move"><a href="#mv-command-Move" class="headerlink" title="mv command [Move]"></a>mv command [Move]</h2><p>mv 命令可以用于移动文件&#x2F;文件夹<br><code>语法: mv 参数1 参数2</code><br>参数1 Linux 路径 表示被移动的文件或文件夹<br>参数2 Linux 路径 表示要移动去的地方 如果目标不存在 则进行改名 确保目标存在</p>
+<h2 id="rm-command-Remove"><a href="#rm-command-Remove" class="headerlink" title="rm command [Remove]"></a>rm command [Remove]</h2><p><code>语法: rm [-r -f] 参数1 参数2 .... 参数 N</code><br>同 cp 命令一样 -r 选项用于删除文件夹<br>-f 表示 force 强制删除 (不会弹出提示确认信息)<br>[普通用户删除内容不会弹出提示只有ROOT用户删除内容会有提示]<br>[故一般普通用户用不到-f选项]<br>参数1 参数2 …. 参数 N 表示要删除的文件或文件夹路径 按照空格隔开</p>
+<h3 id="rm-命令通配符-用来做模糊匹配"><a href="#rm-命令通配符-用来做模糊匹配" class="headerlink" title="rm 命令通配符 * 用来做模糊匹配"></a>rm 命令通配符 * 用来做模糊匹配</h3><p>符号 * 表示通配符 即匹配任意内容(包含空) 例:<br>test* 表示匹配任何以 test 开头的内容<br>*test 表示匹配任何以 test 结尾的内容<br><em>test</em> 表示匹配任何含有 test 的内容</p>
+<p>——————–分隔符——————–</p>
+<h1 id="查找命令"><a href="#查找命令" class="headerlink" title="查找命令"></a>查找命令</h1><h2 id="which-command"><a href="#which-command" class="headerlink" title="which command"></a>which command</h2><p>通过 which 命令 查看使用的一系列命令的程序文件的所在目录<br><code>语法: which 要查找的命令</code></p>
+<h2 id="find-command-文件名查找"><a href="#find-command-文件名查找" class="headerlink" title="find command 文件名查找"></a>find command 文件名查找</h2><p>通过 find 命令搜索指定的文件<br><code>语法: find 起始路径 -name &quot;被查找文件名&quot;</code></p>
+<p>被查找文件名 支持使用通配符 * 来做模糊查询<br>test* 表示匹配任何以 test 开头的内容<br>*test 表示匹配任何以 test 结尾的内容<br><em>test</em> 表示匹配任何含有 test 的内容</p>
+<h3 id="find-command-文件大小查找文件"><a href="#find-command-文件大小查找文件" class="headerlink" title="find command 文件大小查找文件"></a>find command 文件大小查找文件</h3><p><code>语法: find 起始路径 -size + | -n [kMG]</code></p>
+<ul>
+<li>和 - 表示大于和小于<br>n 表示大小数字<br>kMG 表示单位 k (小写)表示 kb M 表示 MB G 表示 GB</li>
+</ul>
+<p>——————–分隔符——————–</p>
+<h1 id="grep-command-wc-command-管道符"><a href="#grep-command-wc-command-管道符" class="headerlink" title="grep command wc command 管道符"></a>grep command wc command 管道符</h1><h2 id="grep-command"><a href="#grep-command" class="headerlink" title="grep command"></a>grep command</h2><p>通过 grep 命令 从文件中同构关键字过滤文件行<br><code>语法: grep [-n] 关键字 文件路径</code><br>选项 -n 可选 表示在结果中显示匹配的行的行号<br>参数 关键字 必填 表示过滤的关键字 带有空格或其他特殊符号 建议使用 “” 将关键字包围起来<br>参数 文件路径 必填 表示要过滤内容的文件路径 可作为内容输入端口</p>
+<h2 id="wc-command"><a href="#wc-command" class="headerlink" title="wc command"></a>wc command</h2><p>通过 wc 命令统计文件的行数 单词数量等<br><code>语法: wc [-c -m -l -w] 文件路径</code><br>选项 -c 统计 bytes 数量<br>选项 -m 统计字符数量<br>选项 -l 统计行数<br>选项 -w 统计单词数量<br>参数 文件路径 被通缉的文件 可作为内容输入端口</p>
+<h2 id="管道符"><a href="#管道符" class="headerlink" title="管道符"></a>管道符</h2><p><code>管道符 | 将管道符左边命令的结果 作为右边命令的输入</code></p>
+<p>——————–分隔符——————–</p>
+<h1 id="echo-command-tail-command-重定向符"><a href="#echo-command-tail-command-重定向符" class="headerlink" title="echo command tail command 重定向符"></a>echo command tail command 重定向符</h1><h2 id="echo-command"><a href="#echo-command" class="headerlink" title="echo command"></a>echo command</h2><p>通过 echo 命令在命令行内输出指定内容<br><code>语法: echo 输出的内容</code><br>无选项 一个参数 表示要输出的内容 复杂内容可以用 “” 包围<br>通过 &#96; 将命令包围 被包围的字符视为命令执行 而非普通字符</p>
+<h2 id="tail-command"><a href="#tail-command" class="headerlink" title="tail command"></a>tail command</h2><p>tail 命令 可以查看文件尾部内容 跟踪文件的最新更改<br><code>语法: tail [-f -num] Linux 路径</code><br>参数 Linux 路径 表示被跟踪的文件路径<br>选项 -f 表示持续跟踪<br>选项 -num 表示 查看尾部多少行 不填默认 10 行</p>
+<h2 id="重定向符-和"><a href="#重定向符-和" class="headerlink" title="重定向符 &gt; 和 &gt;&gt;"></a>重定向符 &gt; 和 &gt;&gt;</h2><p>[&gt;] 将左侧命令的结果 覆盖写入到符号右侧指定的文件中<br>[&gt;&gt;] 将左侧命令的结果 追加写入到符号右侧指定的文件中</p>
+<p>——————–分隔符——————–</p>
+<h1 id="vi-vim-编辑器"><a href="#vi-vim-编辑器" class="headerlink" title="vi&#x2F;vim 编辑器"></a>vi&#x2F;vim 编辑器</h1><p>vi&#x2F;vim 是 visual interface 的简称 是 Linux 最经典的文件编辑器<br>同图形化界面中的文本编辑器一样 vi 是命令行下对文本文件进行编辑的绝佳选择<br>vim 是 vi 的加强版本 兼容 vi 的所有指令 不仅能编辑文本 而且还具有 shell 程序的功能 可以不同颜色的字体来辨别语法的正确性 极大方便了程序的设计和编辑性</p>
+<h2 id="工作模式"><a href="#工作模式" class="headerlink" title="工作模式"></a>工作模式</h2><p>vi&#x2F;vim 编辑器有三种工作模式</p>
+<h3 id="命令模式-Command-mode"><a href="#命令模式-Command-mode" class="headerlink" title="命令模式 (Command mode)"></a>命令模式 (Command mode)</h3><p>命令模式下 所敲的按键编辑器都理解为命令 以命令驱动执行不同的功能<br>此模型下 不能自由进行文本编辑</p>
+<h3 id="输入模式-Insert-mode"><a href="#输入模式-Insert-mode" class="headerlink" title="输入模式 (Insert mode)"></a>输入模式 (Insert mode)</h3><p>也就是所谓的编辑模式 插入模式<br>此模式下 可以对文件内容进行自由编辑</p>
+<h3 id="底线命令模式-Last-line-mode"><a href="#底线命令模式-Last-line-mode" class="headerlink" title="底线命令模式 (Last line mode)"></a>底线命令模式 (Last line mode)</h3><p>以: 开始 通常用于文件的保存 退出</p>
+<h3 id="vi-vim-语法"><a href="#vi-vim-语法" class="headerlink" title="vi&#x2F;vim 语法"></a>vi&#x2F;vim 语法</h3><p>vi 文件路径<br>vim 文件路径<br>vim 兼容全部的 vi 功能 后续全部使用 vim 命令<br>如果文件路径表示的文件不存在 那么此命令会用于编辑新文件<br>如果文件路径表示的文件存在 那么此命令用于编辑已有文件</p>
+<p>命令        描述<br> i       在当前光标位置进入[输入模式]<br> a       在当前光标位置 之后 进入[输入模式]<br> I       在当前行的开头 进入[输入模式]<br> A       在当前行的结尾 进入[输入模式]<br> o       在当前光标下一行进入[输入模式]<br> O       在当前光标上一行进入[输入模式]<br>esc     任何情况下输入 esc 都能回到命令模式</p>
+<p><img src="/blog/./images/image.png" alt="命令模式"></p>
+<p><img src="/blog/./images/image-1.png" alt="底线命令模式"></p>
+<p>——————–分隔符——————–</p>
+<h1 id="Linux-root-user-administrator"><a href="#Linux-root-user-administrator" class="headerlink" title="Linux root user (administrator)"></a>Linux root user (administrator)</h1><h2 id="root-user"><a href="#root-user" class="headerlink" title="root user"></a>root user</h2><p>在 Linux 系统中 拥有最大权限的账户名为 root (超级管理员)<br>普通用户的权限 一般在 hoe 目录内是不受限的<br>一旦出了 home 目录 大多数地方 普通用户仅有只读和执行权限 无修改权限</p>
+<h2 id="su-and-exit-command"><a href="#su-and-exit-command" class="headerlink" title="su and exit command"></a>su and exit command</h2><p>su 命令用于账户切换的系统命令 Switch User<br><code>语法: su [-] [用户名]</code></p>
+<ul>
+<li>可选 表示是否在切换用户后加载环境变量 [建议携带]<br>参数 用户名 表示要切换的用户 用户名也可以省略 胜利表示切换到 root<br>切换用户后 通过 exit 命令退回上一个用户 也可以使用快捷键 ctrl+d</li>
+</ul>
+<p>使用普通用户 切换到其他用户需要输入密码 如切换 root 用户<br>使用 root 用户切换到其他用户 无需密码 直接切换</p>
+<h2 id="sudo-command"><a href="#sudo-command" class="headerlink" title="sudo command"></a>sudo command</h2><p>使用 sudo 命令 为普通的命令授权 临时以 root 身份执行<br><code>语法: sudo 其他命令</code><br>在其他命令之前 带上 sudo 即可为这一条命令临时赋予 root 授权<br>并不是所有的用户 都有权利使用 sudo 需要为普通用户配置 sudo 认证</p>
+<h3 id="为普通用户配置-sudo-认证"><a href="#为普通用户配置-sudo-认证" class="headerlink" title="为普通用户配置 sudo 认证"></a>为普通用户配置 sudo 认证</h3><p>切换到 root 用户 执行 visudo 命令 自动通过 vi 编辑器打开 :&#x2F;etc&#x2F;sudoers<br>在文件的最后添加 [username] ALL&#x3D;(ALL)</p>
+<p>——————–分隔符——————–</p>
+<h1 id="用户、用户组管理"><a href="#用户、用户组管理" class="headerlink" title="用户、用户组管理"></a>用户、用户组管理</h1><p>Linux 系统中可以 配置多个用户 配置多个用户组 用户可以加入多个用户组中</p>
+<p>Linux 中关于权限的管控级别有 2 个级别 :<br>针对用户的权限控制<br>针对用户组的权限控制<br>比如针对某个文件 可以控制用户的权限 也可以控制用户组的权限</p>
+<h2 id="用户组管理"><a href="#用户组管理" class="headerlink" title="用户组管理"></a>用户组管理</h2><p>需 root 用户执行</p>
+<p><code>创建用户组: groupadd 用户组名</code><br><code>删除用户组: groupdel 用户组名</code></p>
+<h2 id="用户管理"><a href="#用户管理" class="headerlink" title="用户管理"></a>用户管理</h2><p>需 root 用户执行</p>
+<p><code>创建用户: useradd [-g -d] 用户名</code><br>-g 选项指定用户的组 不指定 -g 会创建同名组病自动加入 指定 -g 需要组已经存在 如已存在同名组 必须使用 -g<br>-d 选项指定用户的 home 路径 不指定 home 目录默认在 &#x2F;home&#x2F;用户名</p>
+<p>删除用户: userdel [-r] 用户名<br>-r 选项删除用户的 home 目录 不使用 -r 删除用户时 home 目录保留</p>
+<p>查看用户所属组: id [用户名]<br>用户名 被查看的用户 如果不提供则查看自身</p>
+<p><code>修改用户所属组: usermod -aG 用户组 用户名</code><br>将指定用户加入指定用户组</p>
+<h2 id="getent-command"><a href="#getent-command" class="headerlink" title="getent command"></a>getent command</h2><p>getent 命令 可以查看当前系统中有哪些用户<br><code>语法: getent passwd</code><br>获取 7 份信息 分别为:<br>用户名:密码(x):用户ID:组ID:描述信息(无用):home目录:执行终端(默认bash)</p>
+<p>getent 命令 可以查看当前系统中有哪些用户组<br><code>语法: getent group</code><br>获取 3 份信息 分别为:<br>用户组名:组认证(x):组ID</p>
+<p>——————–分隔符——————–</p>
+<h1 id="查看权限控制信息"><a href="#查看权限控制信息" class="headerlink" title="查看权限控制信息"></a>查看权限控制信息</h1><p>[-] 表示文件 [d] 表示文件夹 [l] 表示软链接<br>r 表示读权限 [read] 可以查看文件内容<br>w 表示写权限 [write] 可以修改此文件<br>x 表示执行权限 [execute] 可以将文件作为程序执行<br><a href="./images/image-2.png">认知权限信息</a> <a href="./images/image-3.png">认知权限信息</a></p>
+<h1 id="chmod-command"><a href="#chmod-command" class="headerlink" title="chmod command"></a>chmod command</h1><p>通过 chmod 命令 修改文件 文件夹的权限信息<br>只有文件 文件夹的所属用户或 root 用户可以修改<br><code>语法: chmoad [-R] 权限 文件或文件夹</code><br>选项 -R 对文件夹内的全部内容应用同意的操作<br>例: chomd u&#x3D;rwx,g&#x3D;rx,o&#x3D;x hello.txt<br>      [user] [group] [other]</p>
+<h2 id="快捷写法"><a href="#快捷写法" class="headerlink" title="快捷写法"></a>快捷写法</h2><p>通过 chmod 751 linux文件&#x2F;文件夹 修改权限<br>权限可以通过 3 位数字来代表<br>第一位数字表示用户权限<br>第二位数字表示用户组权限<br>第三位数字表示其他用户权限<br>r 记为 4, w 记为 2, x 记为 1<br><img src="/blog/./images/image-4.png" alt="code"></p>
+<h1 id="chown-command"><a href="#chown-command" class="headerlink" title="chown command"></a>chown command</h1><p>通过 chown 命令 修改文件&#x2F;文件夹的所属用户和用户组<br>普通用户无法修改所属为其他用户或组 此命令只适用于 root 用户<br><code>语法: chown [-R] [用户] [:] [用户组] 文件或文件夹</code><br>选项 -R 同 chmod 对文件夹内全部内容应用相同规则<br>选项 用户 修改所属用户<br>选项 用户组 修改所属用户组<br>[:] 用于分隔用户和用户组<br>例: chown root hello.txt 将所属用户修改为 root<br>    chown :root hello.txt 将所属用户组修改为 root</p>
+<p>——————–分隔符——————–</p>
+<h1 id="小技巧"><a href="#小技巧" class="headerlink" title="小技巧"></a>小技巧</h1><p>Ctrl + C 强制停止运行中的程序和切换新的输入行<br>Ctrl + D 退出退出账户的登录和退出特定程序的专属页面<br>Ctrl + R 输入内容去匹配历史命令 回车直接执行 按左右键进行编辑<br>Ctrl + A 跳到命令开头<br>Ctrl + E 跳到命令结尾<br>Ctrl + 键盘左键 向左跳一个单词<br>Ctrl + 键盘右键 向右跳一个单词<br>Ctrl + L 清空终端内容(clear)<br>history 查看历史输入过的命令<br>! 命令前缀 自动执行上一次匹配前缀的命令</p>
+<p>——————–分隔符——————–</p>
+<h1 id="软件安装"><a href="#软件安装" class="headerlink" title="软件安装"></a>软件安装</h1><h2 id="yum-command"><a href="#yum-command" class="headerlink" title="yum command"></a>yum command</h2><p>yum: RPM 包软件管理器 用于自动化安装配置 Linux 软件 并可以自动解决依赖问题<br><code>语法: yum [-y] [install | remove | search] 软件名称</code><br>选项 -y 自动确认 无需手动确认安装与卸载过程<br>install 安装<br>remove 卸载<br>search 搜索<br>yum 命令需要 root 权限 可以切换到 root 或使用 sudo<br>yum 命令需要联网</p>
+<h3 id="apt-command-for-ubuntu"><a href="#apt-command-for-ubuntu" class="headerlink" title="apt command for ubuntu"></a>apt command for ubuntu</h3><p>CentOS 使用 yum 管理器 Ubuntu 使用 apt 管理器<br><code>语法: apt [-y] [install | remove | search] 软件名称 需要 root</code></p>
+<p>——————–分隔符——————–</p>
+<h1 id="Systemctl-command"><a href="#Systemctl-command" class="headerlink" title="Systemctl command"></a>Systemctl command</h1><p>Linux 系统很多软件 (内置或第三方) 均支持使用 systemctl 命令控制: 启动 开关 开机自启<br>能够被 systemctl 命令管理的软件 一般称之为 [服务]<br><code>语法: systemctl start | stop | status | enable | disable</code><br>                <code>启动    停止   查看状态 开机自启  开机不自启</code></p>
+<p>系统内置的服务较多 例:<br>NetworkManager 主网络服务<br>network 副网络服务<br>firewalld 防火墙服务<br>sshd ssh 服务 (终端远程连接 Linux 系统就是用的此服务)</p>
+<p>第三方软件 例:<br>yum install ntp 安装 ntp 软件 通过 ntpd 服务名控制<br>yum install httpd 安装 apache 服务器软件 通过 httpd 服务名控制<br>部分第三方软件没有自动集成到 systemctl 中 可以手动进行添加</p>
+<p>——————–分隔符——————–</p>
+<h1 id="软链接"><a href="#软链接" class="headerlink" title="软链接"></a>软链接</h1><h2 id="ln-command"><a href="#ln-command" class="headerlink" title="ln command"></a>ln command</h2><p>通过 ln 命令创建软链接 可以将文件 文件夹链接到其他位置 类似于 windows 的快捷方式<br><code>语法: ln -s 参数1 参数2</code><br>-s 选项 创建软链接<br>参数1 被链接的文件或文件夹<br>参数2 要链接去的地方<br>例: ln -s &#x2F;etc&#x2F;yum.conf ~&#x2F;yum.conf <img src="/blog/./images/image-5.png" alt="Alt text"></p>
+<h1 id="日期和时区"><a href="#日期和时区" class="headerlink" title="日期和时区"></a>日期和时区</h1><h2 id="date-command"><a href="#date-command" class="headerlink" title="date command"></a>date command</h2><p>通过 date 命令在命令行中查看系统的时间<br><code>语法: date [-d] [+格式化字符串]</code><br>-d 按照给定的字符串显示日期 一般用于日期计算 可以配合格式化字符串使用</p>
+<p>格式化字符串: 通过特定的字符串标记 来控制显示的日期格式<br>%Y 年<br>%y 年份后两位数字(00..99)<br>%m 月份(01..12)<br>%d 日(01..31)<br>%H 小时(00..23)<br>%M 分钟(00..59)<br>%S 秒(00..60)<br>%s 自 1970-01-01 00:00:00 UTC 到现在的秒数</p>
+<p>修改 Linux 时区<br>rm -f &#x2F;etc&#x2F;localtime<br>ln -s &#x2F;usr&#x2F;share&#x2F;zoneinfo&#x2F;Asia&#x2F;Shanghai &#x2F;etc&#x2F;localtime</p>
+<p>通过 ntp 校准时间<br>yum install ntp<br>ntpdate -u ntp.aliyun.com</p>
+<p>——————–分隔符——————–</p>
+<h1 id="IP-地址和主机名"><a href="#IP-地址和主机名" class="headerlink" title="IP 地址和主机名"></a>IP 地址和主机名</h1><h2 id="IP-地址"><a href="#IP-地址" class="headerlink" title="IP 地址"></a>IP 地址</h2><p>每一台联网的电脑都会有一个地址 用于和其他计算机进行通讯<br>IP 地址主要有 2 个版本 V4 和 V6<br>IPv4 版本的地址格式是 a.b.c.d 其中 abcd 表示 0~255 的数字<br>如 192.168.0.1<br>通过命令 ifconfig 命令 查看本机的 IP 地址 如果无法使用 可以安装<br>yum install net-tools</p>
+<h3 id="特殊-IP-地址"><a href="#特殊-IP-地址" class="headerlink" title="特殊 IP 地址"></a>特殊 IP 地址</h3><p>127.0.0.1 这个 IP 地址指代本机<br>0.0.0.0 可以用于指代本机 可以在端口绑定中用来确定绑定关系 在一些 IP 地址限制中 表示所有 IP 的意思 如放行规则设置为 0.0.0.0 表示允许任意 IP 访问</p>
+<h2 id="主机名"><a href="#主机名" class="headerlink" title="主机名"></a>主机名</h2><p>每一台电脑出了对外联络地址 (IP) 以外 也可以有一个名字 称之为主机名 无论 Windows 还是 Linux 都可以给系统设置主机名<br>可以使用命令 hostname 查看主机名<br>修改主机名 语法: hostnamectl set-hostname 主机名 (需要 root)</p>
+<h2 id="域名解析"><a href="#域名解析" class="headerlink" title="域名解析"></a>域名解析</h2><p>先看本机的记录 (私人地址本)<br>Windows 看 C:\Windows\System32\drivers\etc\hosts<br>Windows 修改为主机名连接 打开上述地址 添加 192.168.101.129 liu(主机名) 即可使用主机名连接<br>Linux 看 &#x2F;etc&#x2F;hosts<br>再联网去 DNS 服务器 (114.114.114.114, 8.8.8.8)<br><a href="DNS.drawio">Title</a></p>
+<p>——————–分隔符——————–</p>
+<h1 id="虚拟机配置固定-IP"><a href="#虚拟机配置固定-IP" class="headerlink" title="虚拟机配置固定 IP"></a>虚拟机配置固定 IP</h1><p>当前虚拟机的 Linux 系统其 IP 地址是通过 DHCP 服务获取的<br>DHCP: 动态获取 IP 地址 即每次重启设置后都会获取一次 导致 IP 频繁变更<br>原因一: 办公电脑 IP 地址变化无所谓 但是我们要远程连接到 Linux 系统 如果 IP 地址经常变化我们就要频繁修改适配<br>原因二: 配置了虚拟机 IP 地址和主机名的映射 如果 IP 频繁更改 也需要频繁更新映射关系</p>
+<h2 id="在-Vmware-WorkStation-中配置-Linux-系统的固定-IP-地址"><a href="#在-Vmware-WorkStation-中配置-Linux-系统的固定-IP-地址" class="headerlink" title="在 Vmware WorkStation 中配置 Linux 系统的固定 IP 地址"></a>在 Vmware WorkStation 中配置 Linux 系统的固定 IP 地址</h2><p>在 VMware Workstation 中配置 IP 地址网关和网段 (IP 地址的范围)<br>在 Linux 系统中手动修改配置文件 固定 IP<br>先将 Vmware 中虚拟网络编辑器的子网 IP 修改为 192.168.88.0 子网掩码为 255.255.255.0 再更改 NAT 设置网关为 192.168.88.2<br>使用 vim 编辑 &#x2F;etc&#x2F;sysconfig&#x2F;network-scripts&#x2F;ifcfg-ens33 文件<br>将 BOOTPROTO&#x3D;”dhcp” 更改为 VOOTPROTO&#x3D;”tatic”<br>在文件后面追加:<br>IPADDR&#x3D;”192.168.88.130” (IP 地址)<br>NETMASK&#x3D;”225.225.225.0” (子网掩码固定 255.255.255.0)<br>GATEWAY&#x3D;”192.168.88.2” (网关和 Vmware 虚拟网络编辑器中设置一致)<br>DNS1&#x3D;”192.168.88.2” (DNS1 设置为网关即可)<br><img src="/blog/./images/image-7.png" alt="Alt text"></p>
+<p>——————–分隔符——————–</p>
+<h1 id="网络请求和下载"><a href="#网络请求和下载" class="headerlink" title="网络请求和下载"></a>网络请求和下载</h1><h2 id="ping-command"><a href="#ping-command" class="headerlink" title="ping command"></a>ping command</h2><p>通过 ping 命令 检查指定的网络服务器是否额联通状态<br><code>语法: ping [-c num] ip 或 主机名</code><br>选项 -c 检查的次数 不使用 -c 选项 将无限次数持续检查<br>参数 IP 或 主机名 被检查的服务器的 ip 地址或主机名地址<br>例: ping baidu.com</p>
+<h2 id="wget-command"><a href="#wget-command" class="headerlink" title="wget command"></a>wget command</h2><p>wget 是非交互式的文件下载器 可以在命令行内下载网络文件<br><code>语法: wget [-b] url</code><br>选项 -b 后台下载 会将日志写入到当前工作目录的 wget-log 文件<br>参数 url 下载链接</p>
+<h2 id="curl-command"><a href="#curl-command" class="headerlink" title="curl command"></a>curl command</h2><p>curl 可以发送 http 网络请求 用于下载文件 获取信息等<br><code>语法: curl [-O] url</code><br>选项 -O 用于下载文件 当 url 是下载链接时 可以使用此选项保存文件<br>参数 url 要发起请求的网络地址</p>
+<p>例: 向 cip.cc 发起网络请求 curl cip.cc 检查本机公网 IP 地址</p>
+<p>——————–分隔符——————–</p>
+<h1 id="端口"><a href="#端口" class="headerlink" title="端口"></a>端口</h1><p>端口 设备与外界通讯交流的出入口 端口可以分为: 物理端口和虚拟端口两类<br>物理端口: 又可称之为接口 是可见的端口 如 USB 接口 RJ45 网口 HDMI 端口<br>虚拟端口: 是指计算机内部的端口 是不可见的 是用来操作系统和外部进行交互使用的</p>
+<p>计算机之间的通讯 通过 IP 只能锁定计算机 但是无法锁定具体的程序<br>通过端口可以锁定计算机上具体的程序 确保程序之间进行沟通<br>IP 地址相当于小区地址 在先去内可以有许多住户 (程序) 而门牌号 (端口) 就是各个住户 (程序) 的联系地址</p>
+<p>Linux 系统是一个超大号小区 可以支持 65535 个端口 这 6 万多个端口分为 3 类进行使用:</p>
+<p><em>公认端口: 1~1023 通常用于一些系统内置或知名程序的预留使用 如 SSH 服务的 22 端口 HTTPS 服务的 443 端口 非特殊需要 不要占用这个范围的端口</em></p>
+<p><em>注册端口: 1024~49151 通常可以随意使用 用于松散的绑定一些程序\服务</em></p>
+<p><em>动态端口 49152~65535 通常不会固定绑定程序 二十当程序对外进行网络链接时 用于临时使用</em></p>
+<p><img src="/blog/./images/image-8.png"></p>
+<h2 id="nmap-command"><a href="#nmap-command" class="headerlink" title="nmap command"></a>nmap command</h2><p>通过 nmap 命令查看端口的占用情况<br>使用 nmap 命令 安装 nmap: yum install nmap<br><code>语法: nmap 被查看的 IP 地址</code></p>
+<h2 id="netstat-command"><a href="#netstat-command" class="headerlink" title="netstat command"></a>netstat command</h2><p>通过 netstat 命令 查看指定端口的占用情况<br><code>语法: netstat -anp | grep 端口号</code><br>安装 netstat: yum install net-tools</p>
+<p>——————–分隔符——————–</p>
+<h1 id="进程管理"><a href="#进程管理" class="headerlink" title="进程管理"></a>进程管理</h1><h2 id="进程"><a href="#进程" class="headerlink" title="进程"></a>进程</h2><p>程序运行在操作系统中 是被操作系统所管理的<br>为管理运行的程序 每一个程序在运行的时候 便被操作系统注册为系统中的一个: 进程<br>并会为每一个进程都分配一个独有的: 进程 ID (进程号)</p>
+<h3 id="ps-command"><a href="#ps-command" class="headerlink" title="ps command"></a>ps command</h3><p>通过 ps 命令查看 Linux 系统中的进程信息<br><code>语法: ps [-e -f]</code><br>选项 -e 显示出全部的进程<br>选项 -f 以完全格式化的形式展示信息 (展示全部信息)<br>一般来说 固定用法就是 ps -ef 列出全部进程的全部信息</p>
+<p>从左到右分别是:<br>UID: 进程所属的用户 ID<br>PID: 进程的进程号 ID<br>PPID: 进程的父 ID (启动此进程的其他进程)<br>C: 此进程的 CPU 占用率 (百分比)<br>STIME: 进程的启动时间<br>TTY: 启动此进程的终端序号 如显示 ? 表示非终端启动<br>TIME: 进程占用 CPU 的时间<br>CMD: 进程对于的名称或启动路径或启动命令</p>
+<h4 id="查看指定进程"><a href="#查看指定进程" class="headerlink" title="查看指定进程"></a>查看指定进程</h4><p>通过使用管道符配合 grep 进行过滤<br>ps -ef | grep tail<br>过滤不仅仅过滤名称、进程号、用户 ID 等等 都可以被 grep 过滤</p>
+<h3 id="关闭进程"><a href="#关闭进程" class="headerlink" title="关闭进程"></a>关闭进程</h3><h4 id="kill-commad"><a href="#kill-commad" class="headerlink" title="kill commad"></a>kill commad</h4><p>通过 kill 命令关闭进程<br><code>语法: kill [-9] 进程 ID</code><br>选项 -9 表示强制关闭进程 不使用此选项会向进程发送信号要求其关闭 但是否关闭看进程自身的处理机制</p>
+<p>——————–分隔符——————–</p>
+<h1 id="主机状态"><a href="#主机状态" class="headerlink" title="主机状态"></a>主机状态</h1><h2 id="top-command"><a href="#top-command" class="headerlink" title="top command"></a>top command</h2><p>通过 top 命令查看 CPU 内存使用情况 类似于 Windows 的任务管理器<br>默认每 5 秒刷新一次<br><code>语法: top 无选项 无参数</code></p>
+<h3 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h3><ol>
+<li><p>第一行: top: 命令名称 14:39:58: 当前系统时间 up 6 min: 启动了 6 分钟 2 users: 2 个用户登录 load: 1、5、15 分钟负载</p>
+</li>
+<li><p>第二行: Tasks: 175 个进程 running: 1 个进程子在运行 174 sleeping: 174 个进程在睡眠 0 个停止进程 0 个僵尸进程</p>
+</li>
+<li><p>第三行: %Cpu(s): CPU 使用率 us: 用户 CPU 使用率 sy: 系统 CPU 使用率 ni: 高优先级进程占用 CPU 时间百分比 id: 空闲 CPU 率 wa: IO 等待 CPU 占用率 hi: CPU 硬件中断率 si: CPU 软件中断率 st: 强制等待占用 CPU 率</p>
+</li>
+<li><p>第四、五行: Kib Mem: 物理内存 total: 总量 free: 空闲 used: 使用 buff&#x2F;cache: buff 和 cache 占用<br>KibSwap: 虚拟内存(交换空间) total: 总量 free: 空闲 used: 使用 buff&#x2F;cache: buff 和 cache 占用</p>
+</li>
+</ol>
+<p><img src="/blog/./images/image-9.png" alt="Alt text"></p>
+<h3 id="介绍-1"><a href="#介绍-1" class="headerlink" title="介绍"></a>介绍</h3><p>PID: 进程 id<br>USER: 进程所属用户<br>PR: 进程优先级 越小越高<br>NI: 表示高优先级 正表示低优先级<br>VIRT: 进程使用虚拟内存 单位 KB<br>RES: 进程使用物理内存 单位 KB<br>SHR: 进程使用共享内存 单位 KB<br>S: 进程状态 (S 休眠 R 运行 Z 僵死状态 N 负数优先级 I 空闲状态)<br>%CPU: 进程占用 CPU 率<br>%MEM: 进程占用内存率<br>TIME+: 进程使用 CPU 时间总计 单位 10 毫秒<br>COMMAND: 进程的命令或名称或程序文件路径</p>
+<h3 id="选项"><a href="#选项" class="headerlink" title="选项"></a>选项</h3><p>选项                    功能</p>
+<p>-p              只显示某个进程的信息<br>-d              设置刷新时间 默认是 5s<br>-c              显示产生进程的完整命令 默认是进程名<br>-n              指定刷新次数 比如 top -n 3 刷新输出 3 次 后退出<br>-b              以非交互非全屏模式运行 以批次的方式执行 top 一般配合 -n 指定输出几个统计信息 将输出重定向到指定文件 如 top -b -n 3 &gt; &#x2F;tmp&#x2F;top.tmp<br>-i              不显示任何闲置 (idle) 或无用 (zombie) 的进程<br>-u              查找特定用户启动的进程</p>
+<h3 id="交互式选项"><a href="#交互式选项" class="headerlink" title="交互式选项"></a>交互式选项</h3><p>当 top 以交互式运行 (非 -b 选项启动) 可以用以下交互式命令进行控制</p>
+<p>按键                    功能</p>
+<p>h 键                显示帮助画面<br>c 键                显示产生进程的完整命令 等同于 -c 参数 再次按下 c  变为默认显示<br>f 键                可以选择需要展示的项目<br>M 键                根据驻留内存大小 (RES) 排序<br>P 键                根据 CPU 使用百分比大小进行排序<br>T 键                根据时间&#x2F;累计时间进行排序<br>E 键                切换顶部内存显示单位<br>e 键                切换进程内存显示单位<br>l 键                切换显示平均负载和启动时间信息<br>i 键                不显示闲置或无用的进程 等同于 -i 参数 再次按下 变为默认显示<br>t 键                切换显示 CPU 状态信息<br>m 键                切换显示内存信息</p>
+<p>——————–分隔符——————–</p>
+<h1 id="磁盘信息监控"><a href="#磁盘信息监控" class="headerlink" title="磁盘信息监控"></a>磁盘信息监控</h1><p>通过 df 命令 查看硬盘的使用情况<br><code>语法: df [-h]</code><br>选项 -h 以更加人性化的单位显示</p>
+<p>通过 iostat 查看 CPU 磁盘的相关信息<br>语法: iostat [-x] [num1] [num2]<br>选项 -x 显示更多信息<br>Num1: 数字 刷新间隔 num2: 数字 刷新次数</p>
+<h2 id="x-详解"><a href="#x-详解" class="headerlink" title="-x 详解"></a>-x 详解</h2><p>rrqm&#x2F;s      每秒这个设备相关的读取请求有多少被 Merge 了 (当系统调用需要读取数据的时候 VFS 将请求发到各个 FS 如果 FS 发现不同的读取请求读取的是相同 Block 的数据 FS 会将这个请求合拼 Merge 提高 IO 利用率 避免重复调用)<br>wrqm&#x2F;s      每秒这个设备相关的写入请求有多少被 Merge 了<br>rsec&#x2F;s      每秒读取的扇区数 sectors<br>wsec&#x2F;:      每秒写入的扇区数<br><em>rKB&#x2F;s:     每秒发送到设备的读取请求数</em><br><em>wKB&#x2F;s:     每秒发送到设备的写入请求数</em><br>avgrq-sz    平均请求扇区的大小<br>avgqu-sz    平均请求队列的长度 队列长度越短越好<br>await:      每一个 IO 请求的处理的平均时间 (单位是微妙毫秒)<br>svctm       表示平均每次设备 I&#x2F;O 操作的服务时间 (以毫秒为单位)<br><em>%util:     磁盘利用率</em></p>
+<h1 id="网络状态监控"><a href="#网络状态监控" class="headerlink" title="网络状态监控"></a>网络状态监控</h1><p>通过 sar 命令查看网络的相关统计<br><code>语法: sar -b DEV num1 num2</code><br>选项 -n 查看网络 DEV 表示查看网络接口<br>num1: 刷新间隔 (不填就查看一次结束) num2: 查看次数 (不填无限次数)</p>
+<p>IFACE   本地网卡接口的名称<br>rxpck&#x2F;s 每秒钟接受的数据包<br>txpck&#x2F;s 每秒钟发送的数据包<br>rxKB&#x2F;s  每秒钟接受的数据包大小 单位为 KB<br>txKB&#x2F;s  每秒钟发送的数据包大小 单位为 KB<br>rxcmp&#x2F;s 每秒钟接受的压缩数据包<br>txcmp&#x2F;s 每秒钟接收的多播数据包</p>
+<p>——————–分隔符——————–</p>
+<h1 id="环境变量"><a href="#环境变量" class="headerlink" title="环境变量"></a>环境变量</h1><p>环境变量是操作系统 (Windows Linux Mac) 在运行的时候 记录的一些关键性信息 用以辅助系统运行</p>
+<h2 id="env-command"><a href="#env-command" class="headerlink" title="env command"></a>env command</h2><p>通过 env 命令查看当前系统中记录的环境变量<br>环境变量是一种 KeyValue 型结构 即名称和值 key &#x3D; value</p>
+<h3 id="PATH"><a href="#PATH" class="headerlink" title="PATH"></a>PATH</h3><p>无论当前工作目录是什么 都能执行 &#x2F;usr&#x2F;bin&#x2F;cd 这个程序 就是借助环境变量中 PATH 这个项目的值来做到的<br>PATH 记录了系统执行任何命令的搜索路径<br>&#x2F;usr&#x2F;local&#x2F;bin      &#x2F;usr&#x2F;bin     &#x2F;usr&#x2F;local&#x2F;sbin     &#x2F;usr&#x2F;bin     &#x2F;home&#x2F;groming&#x2F;.local&#x2F;bin     &#x2F;home&#x2F;groming&#x2F;bin<br>当执行任何命令 都会按照顺序 从上述路径中搜索要执行的程序的本体<br>例如执行 cd 命令 就从第二个目录 &#x2F;usr&#x2F;bin 中搜索到 cd 命令 并执行</p>
+<h2 id="符号"><a href="#符号" class="headerlink" title="$ 符号"></a>$ 符号</h2><p>在 Linux 系统中 $ 符号被用于取 [变量] 的值<br>环境变量记录的信息 除了给操作系统自己使用外 如果自己想要取用 也可以使用<br>取得环境变量的值就可以通过      语法: $环境变量名<br>如: echo $PATH</p>
+<h2 id="自行设置环境变量"><a href="#自行设置环境变量" class="headerlink" title="自行设置环境变量"></a>自行设置环境变量</h2><h3 id="临时设置"><a href="#临时设置" class="headerlink" title="临时设置"></a>临时设置</h3><p>语法: export 变量名 &#x3D; 变量值</p>
+<h3 id="永久生效"><a href="#永久生效" class="headerlink" title="永久生效"></a>永久生效</h3><p>针对当前用户生效 配置在当前用户的:  ~&#x2F;.bashrc 文件中<br>针对所有用户生效 配置在系统的:     &#x2F;etc&#x2F;profile 文件中<br>通过语法: source 配置文件   立刻生效 或重新登录终端</p>
+<h3 id="自定义环境变量-PATH"><a href="#自定义环境变量-PATH" class="headerlink" title="自定义环境变量 PATH"></a>自定义环境变量 PATH</h3><p>环境变量 PATH 这个项目里面记录了系统执行命令的搜索路径<br>这些搜索路径我们也可以自行添加到 PATH 中去<br>export PATH&#x3D;$PATH:&#x2F;文件路径 [$PATH:] 在原有环境变量最加新的环境变量</p>
+<p>——————–分隔符——————–</p>
+<h1 id="Upload-and-Download"><a href="#Upload-and-Download" class="headerlink" title="Upload and Download"></a>Upload and Download</h1><p>在终端软件中提供了 Linux 文件系统可视化图形窗口 方便下载和上传<br>浏览文件系统 找到合适的文件 右键点击下载<br>浏览文件系统 找到合适的目录 将本地电脑的文件拓展进入 即可方便的上传数据到 Linux 中</p>
+<h2 id="rz-sz"><a href="#rz-sz" class="headerlink" title="rz sz"></a>rz sz</h2><p>通过 rz sz 命令进行文件传输 rz sz 命令需要安装<br>通过 yum install lrzsz 命令安装</p>
+<h3 id="rz-command"><a href="#rz-command" class="headerlink" title="rz command"></a>rz command</h3><p>通过 rz 命令进行上传<br><code>语法: rz</code></p>
+<h3 id="sz-command"><a href="#sz-command" class="headerlink" title="sz command"></a>sz command</h3><p>通过 sz 命令进行下载<br><code>语法: sz 要下载的文件</code></p>
+<p>——————–分隔符——————–</p>
+<h1 id="压缩和解压"><a href="#压缩和解压" class="headerlink" title="压缩和解压"></a>压缩和解压</h1><h2 id="压缩格式"><a href="#压缩格式" class="headerlink" title="压缩格式"></a>压缩格式</h2><p>zip: Linux Windows MacOS 常用<br>7zip: Windows 常用<br>rar: Windows 常用<br>tar: Linux MacOS 常用<br>gzip: Linux MacOS 常用</p>
+<h2 id="tar-command"><a href="#tar-command" class="headerlink" title="tar command"></a>tar command</h2><p>Linux 和 Mac 系统常用有 2 种压缩格式 后缀名分别是:</p>
+<ol>
+<li>.tar 称之为 tarball 归档文件 即简单的将文件组装到一个 .tar 的文件内 并没有太多文件体积的减少 仅仅是简单的封装</li>
+<li>.gz 也常见为 .tar .gz gzip 格式压缩文件 即使用 gzip 压缩算法将文件压缩到一个文件内 可以极大的减少压缩后的体积</li>
+</ol>
+<p>针对这两种格式 使用 tar 命令均可以进行压缩和解压缩的操作<br><code>语法: tar [-c -v -x -f -z -C] 参数1 参数2 ... 参数N</code></p>
+<ol>
+<li>-c 创建压缩文件 用于压缩模式</li>
+<li>-v 显示压缩 解压过程 用于查看进度</li>
+<li>-x 解压模式</li>
+<li>-f 要创建的文件 或要解压的文件 -f 选项必须在所有选项中位置处于最后一个</li>
+<li>-z gzip 模式 不使用 -z 就是普通的 tarball 格式</li>
+<li>-C 选择解压的目的地 用于解压模式</li>
+</ol>
+<h3 id="tar-压缩"><a href="#tar-压缩" class="headerlink" title="tar 压缩"></a>tar 压缩</h3><p>tar 压缩的常用组合为:</p>
+<ol>
+<li>tar -cvf test.tar 1.txt 2.txt 3.txt      将 1.txt 2.txt 3.txt 压缩到 test.tar 文件内</li>
+<li>tar -zcvf test.tar.gz 1.txt 2.txt 3.txt  将 1.txt 2.txt 3.txt 压缩到 test.tar.gz 文件内 使用 gzip 模式</li>
+</ol>
+<p><code>-z 选项如果使用的话 一般处于选项位第一个      -f 选项 必须在选项位最后一个</code></p>
+<h3 id="tar-解压"><a href="#tar-解压" class="headerlink" title="tar 解压"></a>tar 解压</h3><p>tar 解压的常用组合为:</p>
+<ol>
+<li>tar -xvf test.tar 解压 test.tar 将文件解压至当前目录</li>
+<li>tar -xvf test.tar -C &#x2F;home&#x2F;groming 解压 test.tar 将文件解压到指定目录 (&#x2F;home&#x2F;gromig)</li>
+<li>tar -zxvf test.tar.gz -C &#x2F;home&#x2F;groming 以 Gzip 解压 test.tar.gz 将文件解压至指定目录 (&#x2F;home&#x2F;groming)</li>
+</ol>
+<p><code>-f 选项 必须在选项组合体的最后一位 -z 选项 建议在开头位置 -C选项单独使用 和解压所需的其他参数分开</code></p>
+<h2 id="zip-command"><a href="#zip-command" class="headerlink" title="zip command"></a>zip command</h2><h3 id="zip-压缩"><a href="#zip-压缩" class="headerlink" title="zip 压缩"></a>zip 压缩</h3><p>通过 zip 命令 压缩文件为 zip 压缩包<br><code>语法: zip [-r] 参数1 参数2 ... 参数N</code><br>-r 被压缩的包含文件夹的时候 需要使用 -r 选项 和 rm cp 等命令的 -r 效果一致</p>
+<ol>
+<li>zip test.zip a.txt b.txt c.txt       将 a.txt b.txt c.txt 压缩到 test.zip 文件内</li>
+<li>zip -r test.zip test groming a.txt   将 test groming 两个文件夹和 a.txt 文件 压缩到 test.zip 文件内</li>
+</ol>
+<h3 id="unzip-解压"><a href="#unzip-解压" class="headerlink" title="unzip 解压"></a>unzip 解压</h3><p>通过 unzip 命令 解压 zip 压缩包<br><code>语法: unzip [-d] 参数</code><br>-d 指定要解压去的位置 同 tar 的 -C 选项<br>参数 被解压的 zip 压缩包文件</p>
+<ol>
+<li>unzip test.zip 将 test.zip 解压到当前目录</li>
+<li>unzip test.zip -d &#x2F;home&#x2F;groming 将 test.zip 解压到指定文件夹内 (&#x2F;home&#x2F;groming)</li>
+</ol>
+<p>——————–分隔符——————–</p>
+<h1 id="他妈的实战"><a href="#他妈的实战" class="headerlink" title="他妈的实战!!!!!!!!!!!!!!!!!!!!!!!!!!!!"></a>他妈的实战!!!!!!!!!!!!!!!!!!!!!!!!!!!!</h1>]]></content>
+      <categories>
+        <category>技术</category>
+      </categories>
+      <tags>
+        <tag>技术</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>markdown 文字颜色、高亮、字体字号设置</title>
+    <url>/blog/2024/04/03/markdown/</url>
+    <content><![CDATA[<h2 id="文字颜色"><a href="#文字颜色" class="headerlink" title="文字颜色"></a>文字颜色</h2><h3 id="写法"><a href="#写法" class="headerlink" title="写法"></a>写法</h3><figure class="highlight css"><table><tr><td class="code"><pre><span class="line">&lt;<span class="attribute">font</span> <span class="attribute">color</span>=<span class="selector-id">#0099ff</span>&gt;<span class="attribute">color</span> <span class="selector-id">#0099ff</span>&lt;/<span class="attribute">font</span>&gt;</span><br><span class="line">&lt;<span class="attribute">font</span> <span class="attribute">color</span>=red&gt;红色&lt;/<span class="attribute">font</span>&gt;</span><br></pre></td></tr></table></figure>
+
+<p><font color=#0099ff>color #0099ff</font><br><font color=red>红色</font></p>
+<span id="more"></span>
+
+<h3 id="字体字号"><a href="#字体字号" class="headerlink" title="字体字号"></a>字体字号</h3><figure class="highlight css"><table><tr><td class="code"><pre><span class="line">默认字体</span><br><span class="line">&lt;<span class="attribute">font</span> face=&quot;黑体&quot;&gt;黑体&lt;/<span class="attribute">font</span>&gt;</span><br><span class="line">&lt;<span class="attribute">font</span> face=&quot;微软雅黑&quot;&gt;微软雅黑&lt;/<span class="attribute">font</span>&gt;</span><br><span class="line">&lt;<span class="attribute">font</span> face=&quot;STCAIYUN&quot;&gt;我是华文彩云&lt;/<span class="attribute">font</span>&gt;</span><br><span class="line">&lt;<span class="attribute">font</span> size=<span class="number">2</span> face=&quot;黑体&quot;&gt;黑体<span class="number">2</span>号&lt;/<span class="attribute">font</span>&gt;</span><br><span class="line">&lt;<span class="selector-tag">b</span>&gt;&lt;<span class="attribute">font</span> size=<span class="number">6</span> face=&quot;黑体&quot;&gt;加粗&lt;/<span class="attribute">font</span>&gt;&lt;/<span class="selector-tag">b</span>&gt;</span><br><span class="line"></span><br><span class="line">&lt;<span class="attribute">font</span> <span class="attribute">color</span>=red size=<span class="number">6</span> face=&quot;黑体&quot;&gt;红色<span class="number">6</span>号黑体&lt;/<span class="attribute">font</span>&gt;</span><br><span class="line">&lt;<span class="selector-tag">b</span>&gt;&lt;<span class="attribute">font</span> <span class="attribute">color</span>=Blue size=<span class="number">7</span> face=&quot;黑体&quot;&gt;蓝色加粗<span class="number">7</span>号黑体&lt;/<span class="attribute">font</span>&gt;&lt;/<span class="selector-tag">b</span>&gt;</span><br></pre></td></tr></table></figure>
+
+<p>默认字体<br><font face="黑体">黑体</font><br><font face="微软雅黑">微软雅黑</font><br><font face="STCAIYUN">我是华文彩云</font><br><font size=2 face="黑体">黑体2号</font><br><b><font size=6 face="黑体">加粗</font></b></p>
+<p><font color=red size=6 face="黑体">红色6号黑体</font><br><b><font color=Blue size=7 face="黑体">蓝色加粗7号黑体</font></b></p>
+<h3 id="文字居中"><a href="#文字居中" class="headerlink" title="文字居中"></a>文字居中</h3><figure class="highlight css"><table><tr><td class="code"><pre><span class="line">&lt;center&gt;文字居中<span class="number">1</span>&lt;/center&gt;</span><br><span class="line">&lt;<span class="selector-tag">div</span> align=center&gt;文字居中<span class="number">2</span>&lt;/<span class="selector-tag">div</span>&gt;</span><br></pre></td></tr></table></figure>
+<center>文字居中1</center>
+<div align=center>文字居中2</div>
+
+<h3 id="文字加粗"><a href="#文字加粗" class="headerlink" title="文字加粗"></a>文字加粗</h3><figure class="highlight css"><table><tr><td class="code"><pre><span class="line">&lt;<span class="selector-tag">b</span>&gt;加粗&lt;/<span class="selector-tag">b</span>&gt;</span><br><span class="line">&lt;<span class="selector-tag">b</span>&gt;&lt;<span class="attribute">font</span> <span class="attribute">color</span>=Blue size=<span class="number">7</span> face=&quot;黑体&quot;&gt;蓝色加粗<span class="number">7</span>号黑体&lt;/<span class="attribute">font</span>&gt;&lt;/<span class="selector-tag">b</span>&gt;</span><br></pre></td></tr></table></figure>
+
+<p><b>加粗</b><br><b><font color=Blue size=7 face="黑体">蓝色加粗7号黑体</font></b></p>
+<h3 id="文字与代码高亮"><a href="#文字与代码高亮" class="headerlink" title="文字与代码高亮"></a>文字与代码高亮</h3><figure class="highlight css"><table><tr><td class="code"><pre><span class="line">==highlight <span class="number">1</span>==</span><br><span class="line">&lt;<span class="selector-tag">mark</span>&gt;highlight <span class="number">2</span>&lt;/<span class="selector-tag">mark</span>&gt;</span><br><span class="line">&lt;<span class="selector-tag">span</span> style=&quot;<span class="attribute">background-color</span>:<span class="built_in">rgb</span>(<span class="number">100</span>,<span class="number">200</span>,<span class="number">200</span>,<span class="number">0.5</span>)<span class="string">&quot;&gt;highlight 3&lt;/span&gt;</span></span><br><span class="line"><span class="string">```code 1```</span></span><br><span class="line"><span class="string">`code 2`</span></span><br></pre></td></tr></table></figure>
+
+<p>&#x3D;&#x3D;highlight 1&#x3D;&#x3D;<br><mark>highlight 2</mark><br><span style="background-color:rgb(100,200,200,0.5)">highlight 3</span><br><code>code 1</code><br><code>code 2</code></p>
+<h3 id="文字底色"><a href="#文字底色" class="headerlink" title="文字底色"></a>文字底色</h3><figure class="highlight css"><table><tr><td class="code"><pre><span class="line">&lt;<span class="selector-tag">table</span>&gt;&lt;<span class="selector-tag">tr</span>&gt;&lt;<span class="selector-tag">td</span> bgcolor=PowderBlue&gt;这里的背景色是：PowderBlue，  十六进制颜色值： <span class="selector-id">#B0E0E6</span>，rgb(<span class="number">176</span>, <span class="number">224</span>, <span class="number">230</span>)&lt;/<span class="selector-tag">td</span>&gt;&lt;/<span class="selector-tag">tr</span>&gt;&lt;/<span class="selector-tag">table</span>&gt;</span><br></pre></td></tr></table></figure>
+
+<table><tr><td bgcolor=PowderBlue>这里的背景色是：PowderBlue，  十六进制颜色值： #B0E0E6，rgb(176, 224, 230)</td></tr></table>
+
+<h3 id="常用颜色"><a href="#常用颜色" class="headerlink" title="常用颜色"></a>常用颜色</h3><p><font color=maroon>color&#x3D;maroon</font><br><font color=grey>color&#x3D;grey</font><br><font color=silver>color&#x3D;silver</font><br><font color=lightgrey>color&#x3D;lightgrey</font><br><font color=HotPink>color&#x3D;HotPink</font><br><font color=DeepPink>color&#x3D;DeepPink</font><br><font color=VioletRed>color&#x3D;VioletRed</font><br><font color=Purple>color&#x3D;Purple</font><br><font color=navy>color&#x3D;navy</font><br><font color=Blue>color&#x3D;Blue</font><br><font color=DeepSkyBlue>color&#x3D;DeepSkyBlue</font><br><font color=LightSkyBlue>color&#x3D;LightSkyBlue</font><br><font color=aqua>color&#x3D;aqua</font><br><font color=DarkTurquoise>color&#x3D;DarkTurquoise</font><br><font color=LightSeaGreen>color&#x3D;LightSeaGreen</font><br><font color=YellowGreen>color&#x3D;YellowGreen</font><br><font color=LawnGreen>color&#x3D;LawnGreen</font><br><font color=GreenYellow>color&#x3D;GreenYellow</font><br><font color=Yellow>color&#x3D;Yellow</font><br><font color=Tomato>color&#x3D;Tomato</font><br><font color=red>color&#x3D;red</font><br><font color=fuchsia>color&#x3D;fuchsia</font><br><font color=MediumOrchid>color&#x3D;MediumOrchid</font><br><font color=DarkViolet>color&#x3D;DarkViolet</font></p>
+]]></content>
+      <categories>
+        <category>技术</category>
+      </categories>
+      <tags>
+        <tag>技术</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>SQL</title>
+    <url>/blog/2024/03/14/SQL/</url>
+    <content><![CDATA[<h1 id="MySQL"><a href="#MySQL" class="headerlink" title="MySQL"></a>MySQL</h1><h1 id="start-and-stop"><a href="#start-and-stop" class="headerlink" title="start and stop"></a>start and stop</h1><h2 id="start"><a href="#start" class="headerlink" title="start"></a>start</h2><figure class="highlight sql"><table><tr><td class="code"><pre><span class="line">net <span class="keyword">start</span> mysql80</span><br></pre></td></tr></table></figure>
+
+<h2 id="stop"><a href="#stop" class="headerlink" title="stop"></a>stop</h2><figure class="highlight sql"><table><tr><td class="code"><pre><span class="line">net stop mysql80</span><br></pre></td></tr></table></figure>
+<span id="more"></span>
+<p>——————–分隔符——————–</p>
+<h1 id="客户端连接"><a href="#客户端连接" class="headerlink" title="客户端连接"></a>客户端连接</h1><h2 id="MySQL-命令行"><a href="#MySQL-命令行" class="headerlink" title="MySQL 命令行"></a>MySQL 命令行</h2><p>MySQL 自带的客户端命令行</p>
+<h2 id="通过-powershell-连接"><a href="#通过-powershell-连接" class="headerlink" title="通过 powershell 连接"></a>通过 powershell 连接</h2><figure class="highlight sql"><table><tr><td class="code"><pre><span class="line">mysql [<span class="operator">-</span>h <span class="number">127.0</span><span class="number">.0</span><span class="number">.1</span>] [<span class="operator">-</span>p <span class="number">3306</span>] <span class="operator">-</span>u root <span class="operator">-</span>p</span><br></pre></td></tr></table></figure>
+
+<p>——————–分隔符——————–</p>
+<h1 id="关系型数据库-RDBMS"><a href="#关系型数据库-RDBMS" class="headerlink" title="关系型数据库 (RDBMS)"></a>关系型数据库 (RDBMS)</h1><p>概念: 建立在关系模型基础上 由多张相互连接的二维表组成的数据库</p>
+<ol>
+<li>使用表存储数据 格式统一 便于维护</li>
+<li>使用 SQL 语言操作 标准统一 使用方便</li>
+</ol>
+<h2 id="数据模型"><a href="#数据模型" class="headerlink" title="数据模型"></a>数据模型</h2><p>通过客户端连接 MySQL 管理系统 DBMS 通过 SQL 语句创建数据库 通过 SQL 语句在指定的数据库创建表</p>
+<p>——————–分隔符——————–</p>
+<h1 id="SQL"><a href="#SQL" class="headerlink" title="SQL"></a>SQL</h1><h2 id="SQL-通用语法"><a href="#SQL-通用语法" class="headerlink" title="SQL 通用语法"></a>SQL 通用语法</h2><ol>
+<li>SQL 语句可以单行或多行书写 以分号结尾</li>
+<li>SQL 语句可以使用空格&#x2F;缩进来增强语句的可读性</li>
+<li>MySQL 数据库的 SQL 语句不区分大小写 关键字建议使用大写</li>
+<li>注释:<br>单行注释 – 注释内容 或 # 注释内容 (MySQL 特有)<br>多行注释 &#x2F;<em>注释内容</em>&#x2F;</li>
+</ol>
+<h2 id="SQL-分类"><a href="#SQL-分类" class="headerlink" title="SQL 分类"></a>SQL 分类</h2><p>类      全称                          说明</p>
+<p>DDL   Data Definition Language    数据定义语言 用来定义数据库对象 (数据库 表 字段)<br>DML   Data Manipulation Language  数据操作语言 用来对数据库表中的数据进行增删改<br>DQL   Data Query Language         数据查询语言 用来查询数据库中表的记录<br>DCL   Data Control Language       数据控制语言  用来创建数据库用户 控制数据库的访问权限</p>
+<h2 id="DDL-Data-Definition-Language-数据定义语言-用来定义数据库对象-数据库-表-字段"><a href="#DDL-Data-Definition-Language-数据定义语言-用来定义数据库对象-数据库-表-字段" class="headerlink" title="DDL Data Definition Language    数据定义语言 用来定义数据库对象 (数据库 表 字段)"></a>DDL Data Definition Language    数据定义语言 用来定义数据库对象 (数据库 表 字段)</h2><h3 id="DDL-数据库操作"><a href="#DDL-数据库操作" class="headerlink" title="DDL 数据库操作"></a>DDL 数据库操作</h3><p>查询: </p>
+<p><code>查询所有数据库</code></p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">show</span> databases;</span><br></pre></td></tr></table></figure>
+
+<p><code>查询当前数据库</code></p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">select</span> database();</span><br></pre></td></tr></table></figure>
+
+<p><code>创建</code></p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">create</span> database [IF <span class="keyword">NOT</span> <span class="keyword">EXISTS</span>]`如果名称不存在创建 存在不执行操作` 数据库名 [<span class="keyword">DEFAULT</span> CHARSET 字符集 (设置字符集推荐用 utf8mb4)] [<span class="keyword">COLLATE</span> 排序规则];</span><br></pre></td></tr></table></figure>
+
+<p><code>删除</code></p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">drop</span> database [if <span class="keyword">EXISTS</span>] 数据库名;</span><br></pre></td></tr></table></figure>
+
+<p><code>使用</code></p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line">use 数据库名;</span><br></pre></td></tr></table></figure>
+<p>——————–分隔符——————–</p>
+<h3 id="DDL-表操作-查询"><a href="#DDL-表操作-查询" class="headerlink" title="DDL 表操作 查询"></a>DDL 表操作 查询</h3><p><code>查询当前数据库所有表</code></p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">show</span> tables;</span><br></pre></td></tr></table></figure>
+
+<p><code>查询表结构</code></p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">desc</span> 表名;</span><br></pre></td></tr></table></figure>
+
+<p><code>查询指定表的建表语句</code></p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">show</span> <span class="keyword">create</span> <span class="keyword">table</span> 表名;</span><br></pre></td></tr></table></figure>
+
+<h3 id="DDL-表操作-创建"><a href="#DDL-表操作-创建" class="headerlink" title="DDL 表操作 创建"></a>DDL 表操作 创建</h3><figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">create</span> <span class="keyword">table</span> 表名(</span><br><span class="line">  字段<span class="number">1</span> 字段<span class="number">1</span>类型 [comment 字段<span class="number">1</span>注释],</span><br><span class="line">  字段<span class="number">2</span> 字段<span class="number">2</span>类型 [comment 字段<span class="number">2</span>注释],</span><br><span class="line">  字段<span class="number">3</span> 字段<span class="number">3</span>类型 [comment 字段<span class="number">3</span>注释],</span><br><span class="line">  ......</span><br><span class="line">  字段n 字段n类型 [comment 字段n注释]</span><br><span class="line">)[comment 表注释]</span><br></pre></td></tr></table></figure>
+
+<p>——————–分隔符——————–</p>
+<h3 id="DDL-表操作-数据类型"><a href="#DDL-表操作-数据类型" class="headerlink" title="DDL 表操作 数据类型"></a>DDL 表操作 数据类型</h3><p>MySQL 主要分为三类数据类型: 数值类型 字符串类型 日期时间类型</p>
+<p><img src="/blog/images/image_1.png" alt="数值类型"></p>
+<p><img src="/blog/images/image_2.png" alt="字符串类型"></p>
+<p><img src="/blog/images/image_3.png" alt="日期类型"></p>
+<p>——————–分隔符——————–</p>
+<h3 id="DDL-表操作-修改"><a href="#DDL-表操作-修改" class="headerlink" title="DDL 表操作 修改"></a>DDL 表操作 修改</h3><p><code>添加字段</code></p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">AlTER</span> <span class="keyword">TABLE</span> 表名 <span class="keyword">ADD</span> 字段名 类型(长度) [COMMENT 注释] [约束];</span><br></pre></td></tr></table></figure>
+
+<p><code>修改数据类型</code></p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">ALTER</span> <span class="keyword">TABLE</span> 表名 MODIFY 字段名 新数据类型(长度);</span><br></pre></td></tr></table></figure>
+
+<p><code>修改字段名和字段类型</code></p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">ALTER</span> <span class="keyword">TABLE</span> 表名 CHANGE 旧字段名 新字段名 类型(长度) [COMMENT 注释] [约束];</span><br></pre></td></tr></table></figure>
+
+<p><code>删除字段</code></p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">ALTER</span> <span class="keyword">TABLE</span> 表名 <span class="keyword">DROP</span> 字段名;</span><br></pre></td></tr></table></figure>
+
+<p><code>修改表名</code></p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">ALTER</span> <span class="keyword">TABLE</span> 表名 RENAME <span class="keyword">TO</span> 新表名;</span><br></pre></td></tr></table></figure>
+
+<p><code>删除表</code></p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">DROP</span> <span class="keyword">TABLE</span> [IF <span class="keyword">EXISTS</span>] 表名;</span><br></pre></td></tr></table></figure>
+
+<p><code>删除指定表,并重新创建该表</code></p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">TRUNCATE</span> <span class="keyword">TABLE</span> 表名;</span><br></pre></td></tr></table></figure>
+
+<h3 id="删除表时-不管使用以上哪种语句数据都将清空"><a href="#删除表时-不管使用以上哪种语句数据都将清空" class="headerlink" title="删除表时 不管使用以上哪种语句数据都将清空"></a>删除表时 不管使用以上哪种语句数据都将清空</h3><p>——————–分隔符——————–</p>
+<h2 id="DML-Data-Manipulation-Language-数据操作语言-用来对数据库表中的数据进行增删改"><a href="#DML-Data-Manipulation-Language-数据操作语言-用来对数据库表中的数据进行增删改" class="headerlink" title="DML Data Manipulation Language  数据操作语言 用来对数据库表中的数据进行增删改"></a>DML Data Manipulation Language  数据操作语言 用来对数据库表中的数据进行增删改</h2><h3 id="DML-添加数据"><a href="#DML-添加数据" class="headerlink" title="DML 添加数据"></a>DML 添加数据</h3><p><code>给指定字段添加数据</code></p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> 表名(字段名<span class="number">1</span>,字段名<span class="number">2</span>,...) <span class="keyword">VALUES</span>(值<span class="number">1</span>,值<span class="number">2</span>,...);</span><br></pre></td></tr></table></figure>
+
+<p><code>给全部字段添加数据</code></p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> 表名 <span class="keyword">VALUES</span> (值<span class="number">1</span>, 值<span class="number">2</span>, ...);</span><br></pre></td></tr></table></figure>
+
+<p><code>批量添加数据</code></p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> 表名 (字段名<span class="number">1</span>,字段名<span class="number">2</span>,...) <span class="keyword">VALUES</span> (值<span class="number">1</span>, 值<span class="number">2</span>, ...), (值<span class="number">1</span>, 值<span class="number">2</span>, ...), (值<span class="number">1</span>, 值<span class="number">2</span>, ...);</span><br><span class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> 表名 <span class="keyword">VALUES</span> (值<span class="number">1</span>, 值<span class="number">2</span>, ...), (值<span class="number">1</span>, 值<span class="number">2</span>, ...), (值<span class="number">1</span>, 值<span class="number">2</span>, ...);</span><br></pre></td></tr></table></figure>
+
+<p><em>插入数据时，指定的字段顺序需要与值的顺序是一一对应的</em><br><em>字符串和日期型数据应该包含在引号中</em><br><em>插入的数据大小，应该在字段的规定范围内</em></p>
+<p>——————–分隔符——————–</p>
+<h3 id="DML-修改数据"><a href="#DML-修改数据" class="headerlink" title="DML 修改数据"></a>DML 修改数据</h3><p><code>修改数据</code></p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">UPDATE</span> 表名 <span class="keyword">SET</span> 字段名 <span class="number">1</span> <span class="operator">=</span> 值 <span class="number">1</span>, 字段名 <span class="number">2</span> <span class="operator">=</span> 值 <span class="number">2</span>, ... [<span class="keyword">WHERE</span> 条件];</span><br></pre></td></tr></table></figure>
+
+<p><em>修改语句的条件可以有,也可以没有,如果没有条件,则会修改整张表 的所有数据</em></p>
+]]></content>
+      <categories>
+        <category>技术</category>
+      </categories>
+      <tags>
+        <tag>技术</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>gitee踩坑</title>
+    <url>/blog/2024/04/10/gitee%E8%B8%A9%E5%9D%91/</url>
+    <content><![CDATA[]]></content>
+      <categories>
+        <category>技术</category>
+      </categories>
+      <tags>
+        <tag>技术</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Blog</title>
+    <url>/blog/2024/04/02/index/</url>
+    <content><![CDATA[<h2 id="Welcome-to-my-Blog"><a href="#Welcome-to-my-Blog" class="headerlink" title="Welcome to my Blog!"></a>Welcome to my Blog!</h2>]]></content>
+      <tags>
+        <tag>Blog</tag>
+      </tags>
+  </entry>
+</search>
