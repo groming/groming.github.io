@@ -2,7 +2,7 @@
 <search>
   <entry>
     <title>Linux 基础</title>
-    <url>/blog/2023/09/17/Linux/</url>
+    <url>/2023/09/17/Linux/</url>
     <content><![CDATA[<h1 id="Linux-命令基础"><a href="#Linux-命令基础" class="headerlink" title="Linux 命令基础"></a>Linux 命令基础</h1><p>Linux 中命令的通用格式:<br>command [-options] [parameter]</p>
 <p>command: 命令本身<br>-options: [可选 非必填] 命令的一些选项 可以通过选项控制命令的行为细节<br>parameter: [可选 非必填] 命令的参数 多数用于命令的指向目标等<br>[] 表示可选</p>
 <span id="more"></span>
@@ -50,8 +50,8 @@
 <h3 id="底线命令模式-Last-line-mode"><a href="#底线命令模式-Last-line-mode" class="headerlink" title="底线命令模式 (Last line mode)"></a>底线命令模式 (Last line mode)</h3><p>以: 开始 通常用于文件的保存 退出</p>
 <h3 id="vi-vim-语法"><a href="#vi-vim-语法" class="headerlink" title="vi&#x2F;vim 语法"></a>vi&#x2F;vim 语法</h3><p>vi 文件路径<br>vim 文件路径<br>vim 兼容全部的 vi 功能 后续全部使用 vim 命令<br>如果文件路径表示的文件不存在 那么此命令会用于编辑新文件<br>如果文件路径表示的文件存在 那么此命令用于编辑已有文件</p>
 <p>命令        描述<br> i       在当前光标位置进入[输入模式]<br> a       在当前光标位置 之后 进入[输入模式]<br> I       在当前行的开头 进入[输入模式]<br> A       在当前行的结尾 进入[输入模式]<br> o       在当前光标下一行进入[输入模式]<br> O       在当前光标上一行进入[输入模式]<br>esc     任何情况下输入 esc 都能回到命令模式</p>
-<p><img src="/blog/./images/image.png" alt="命令模式"></p>
-<p><img src="/blog/./images/image-1.png" alt="底线命令模式"></p>
+<p><img src="/./images/image.png" alt="命令模式"></p>
+<p><img src="/./images/image-1.png" alt="底线命令模式"></p>
 <p>——————–分隔符——————–</p>
 <h1 id="Linux-root-user-administrator"><a href="#Linux-root-user-administrator" class="headerlink" title="Linux root user (administrator)"></a>Linux root user (administrator)</h1><h2 id="root-user"><a href="#root-user" class="headerlink" title="root user"></a>root user</h2><p>在 Linux 系统中 拥有最大权限的账户名为 root (超级管理员)<br>普通用户的权限 一般在 hoe 目录内是不受限的<br>一旦出了 home 目录 大多数地方 普通用户仅有只读和执行权限 无修改权限</p>
 <h2 id="su-and-exit-command"><a href="#su-and-exit-command" class="headerlink" title="su and exit command"></a>su and exit command</h2><p>su 命令用于账户切换的系统命令 Switch User<br><code>语法: su [-] [用户名]</code></p>
@@ -76,7 +76,7 @@
 <p>——————–分隔符——————–</p>
 <h1 id="查看权限控制信息"><a href="#查看权限控制信息" class="headerlink" title="查看权限控制信息"></a>查看权限控制信息</h1><p>[-] 表示文件 [d] 表示文件夹 [l] 表示软链接<br>r 表示读权限 [read] 可以查看文件内容<br>w 表示写权限 [write] 可以修改此文件<br>x 表示执行权限 [execute] 可以将文件作为程序执行<br><a href="./images/image-2.png">认知权限信息</a> <a href="./images/image-3.png">认知权限信息</a></p>
 <h1 id="chmod-command"><a href="#chmod-command" class="headerlink" title="chmod command"></a>chmod command</h1><p>通过 chmod 命令 修改文件 文件夹的权限信息<br>只有文件 文件夹的所属用户或 root 用户可以修改<br><code>语法: chmoad [-R] 权限 文件或文件夹</code><br>选项 -R 对文件夹内的全部内容应用同意的操作<br>例: chomd u&#x3D;rwx,g&#x3D;rx,o&#x3D;x hello.txt<br>      [user] [group] [other]</p>
-<h2 id="快捷写法"><a href="#快捷写法" class="headerlink" title="快捷写法"></a>快捷写法</h2><p>通过 chmod 751 linux文件&#x2F;文件夹 修改权限<br>权限可以通过 3 位数字来代表<br>第一位数字表示用户权限<br>第二位数字表示用户组权限<br>第三位数字表示其他用户权限<br>r 记为 4, w 记为 2, x 记为 1<br><img src="/blog/./images/image-4.png" alt="code"></p>
+<h2 id="快捷写法"><a href="#快捷写法" class="headerlink" title="快捷写法"></a>快捷写法</h2><p>通过 chmod 751 linux文件&#x2F;文件夹 修改权限<br>权限可以通过 3 位数字来代表<br>第一位数字表示用户权限<br>第二位数字表示用户组权限<br>第三位数字表示其他用户权限<br>r 记为 4, w 记为 2, x 记为 1<br><img src="/./images/image-4.png" alt="code"></p>
 <h1 id="chown-command"><a href="#chown-command" class="headerlink" title="chown command"></a>chown command</h1><p>通过 chown 命令 修改文件&#x2F;文件夹的所属用户和用户组<br>普通用户无法修改所属为其他用户或组 此命令只适用于 root 用户<br><code>语法: chown [-R] [用户] [:] [用户组] 文件或文件夹</code><br>选项 -R 同 chmod 对文件夹内全部内容应用相同规则<br>选项 用户 修改所属用户<br>选项 用户组 修改所属用户组<br>[:] 用于分隔用户和用户组<br>例: chown root hello.txt 将所属用户修改为 root<br>    chown :root hello.txt 将所属用户组修改为 root</p>
 <p>——————–分隔符——————–</p>
 <h1 id="小技巧"><a href="#小技巧" class="headerlink" title="小技巧"></a>小技巧</h1><p>Ctrl + C 强制停止运行中的程序和切换新的输入行<br>Ctrl + D 退出退出账户的登录和退出特定程序的专属页面<br>Ctrl + R 输入内容去匹配历史命令 回车直接执行 按左右键进行编辑<br>Ctrl + A 跳到命令开头<br>Ctrl + E 跳到命令结尾<br>Ctrl + 键盘左键 向左跳一个单词<br>Ctrl + 键盘右键 向右跳一个单词<br>Ctrl + L 清空终端内容(clear)<br>history 查看历史输入过的命令<br>! 命令前缀 自动执行上一次匹配前缀的命令</p>
@@ -88,7 +88,7 @@
 <p>系统内置的服务较多 例:<br>NetworkManager 主网络服务<br>network 副网络服务<br>firewalld 防火墙服务<br>sshd ssh 服务 (终端远程连接 Linux 系统就是用的此服务)</p>
 <p>第三方软件 例:<br>yum install ntp 安装 ntp 软件 通过 ntpd 服务名控制<br>yum install httpd 安装 apache 服务器软件 通过 httpd 服务名控制<br>部分第三方软件没有自动集成到 systemctl 中 可以手动进行添加</p>
 <p>——————–分隔符——————–</p>
-<h1 id="软链接"><a href="#软链接" class="headerlink" title="软链接"></a>软链接</h1><h2 id="ln-command"><a href="#ln-command" class="headerlink" title="ln command"></a>ln command</h2><p>通过 ln 命令创建软链接 可以将文件 文件夹链接到其他位置 类似于 windows 的快捷方式<br><code>语法: ln -s 参数1 参数2</code><br>-s 选项 创建软链接<br>参数1 被链接的文件或文件夹<br>参数2 要链接去的地方<br>例: ln -s &#x2F;etc&#x2F;yum.conf ~&#x2F;yum.conf <img src="/blog/./images/image-5.png" alt="Alt text"></p>
+<h1 id="软链接"><a href="#软链接" class="headerlink" title="软链接"></a>软链接</h1><h2 id="ln-command"><a href="#ln-command" class="headerlink" title="ln command"></a>ln command</h2><p>通过 ln 命令创建软链接 可以将文件 文件夹链接到其他位置 类似于 windows 的快捷方式<br><code>语法: ln -s 参数1 参数2</code><br>-s 选项 创建软链接<br>参数1 被链接的文件或文件夹<br>参数2 要链接去的地方<br>例: ln -s &#x2F;etc&#x2F;yum.conf ~&#x2F;yum.conf <img src="/./images/image-5.png" alt="Alt text"></p>
 <h1 id="日期和时区"><a href="#日期和时区" class="headerlink" title="日期和时区"></a>日期和时区</h1><h2 id="date-command"><a href="#date-command" class="headerlink" title="date command"></a>date command</h2><p>通过 date 命令在命令行中查看系统的时间<br><code>语法: date [-d] [+格式化字符串]</code><br>-d 按照给定的字符串显示日期 一般用于日期计算 可以配合格式化字符串使用</p>
 <p>格式化字符串: 通过特定的字符串标记 来控制显示的日期格式<br>%Y 年<br>%y 年份后两位数字(00..99)<br>%m 月份(01..12)<br>%d 日(01..31)<br>%H 小时(00..23)<br>%M 分钟(00..59)<br>%S 秒(00..60)<br>%s 自 1970-01-01 00:00:00 UTC 到现在的秒数</p>
 <p>修改 Linux 时区<br>rm -f &#x2F;etc&#x2F;localtime<br>ln -s &#x2F;usr&#x2F;share&#x2F;zoneinfo&#x2F;Asia&#x2F;Shanghai &#x2F;etc&#x2F;localtime</p>
@@ -100,7 +100,7 @@
 <h2 id="域名解析"><a href="#域名解析" class="headerlink" title="域名解析"></a>域名解析</h2><p>先看本机的记录 (私人地址本)<br>Windows 看 C:\Windows\System32\drivers\etc\hosts<br>Windows 修改为主机名连接 打开上述地址 添加 192.168.101.129 liu(主机名) 即可使用主机名连接<br>Linux 看 &#x2F;etc&#x2F;hosts<br>再联网去 DNS 服务器 (114.114.114.114, 8.8.8.8)<br><a href="DNS.drawio">Title</a></p>
 <p>——————–分隔符——————–</p>
 <h1 id="虚拟机配置固定-IP"><a href="#虚拟机配置固定-IP" class="headerlink" title="虚拟机配置固定 IP"></a>虚拟机配置固定 IP</h1><p>当前虚拟机的 Linux 系统其 IP 地址是通过 DHCP 服务获取的<br>DHCP: 动态获取 IP 地址 即每次重启设置后都会获取一次 导致 IP 频繁变更<br>原因一: 办公电脑 IP 地址变化无所谓 但是我们要远程连接到 Linux 系统 如果 IP 地址经常变化我们就要频繁修改适配<br>原因二: 配置了虚拟机 IP 地址和主机名的映射 如果 IP 频繁更改 也需要频繁更新映射关系</p>
-<h2 id="在-Vmware-WorkStation-中配置-Linux-系统的固定-IP-地址"><a href="#在-Vmware-WorkStation-中配置-Linux-系统的固定-IP-地址" class="headerlink" title="在 Vmware WorkStation 中配置 Linux 系统的固定 IP 地址"></a>在 Vmware WorkStation 中配置 Linux 系统的固定 IP 地址</h2><p>在 VMware Workstation 中配置 IP 地址网关和网段 (IP 地址的范围)<br>在 Linux 系统中手动修改配置文件 固定 IP<br>先将 Vmware 中虚拟网络编辑器的子网 IP 修改为 192.168.88.0 子网掩码为 255.255.255.0 再更改 NAT 设置网关为 192.168.88.2<br>使用 vim 编辑 &#x2F;etc&#x2F;sysconfig&#x2F;network-scripts&#x2F;ifcfg-ens33 文件<br>将 BOOTPROTO&#x3D;”dhcp” 更改为 VOOTPROTO&#x3D;”tatic”<br>在文件后面追加:<br>IPADDR&#x3D;”192.168.88.130” (IP 地址)<br>NETMASK&#x3D;”225.225.225.0” (子网掩码固定 255.255.255.0)<br>GATEWAY&#x3D;”192.168.88.2” (网关和 Vmware 虚拟网络编辑器中设置一致)<br>DNS1&#x3D;”192.168.88.2” (DNS1 设置为网关即可)<br><img src="/blog/./images/image-7.png" alt="Alt text"></p>
+<h2 id="在-Vmware-WorkStation-中配置-Linux-系统的固定-IP-地址"><a href="#在-Vmware-WorkStation-中配置-Linux-系统的固定-IP-地址" class="headerlink" title="在 Vmware WorkStation 中配置 Linux 系统的固定 IP 地址"></a>在 Vmware WorkStation 中配置 Linux 系统的固定 IP 地址</h2><p>在 VMware Workstation 中配置 IP 地址网关和网段 (IP 地址的范围)<br>在 Linux 系统中手动修改配置文件 固定 IP<br>先将 Vmware 中虚拟网络编辑器的子网 IP 修改为 192.168.88.0 子网掩码为 255.255.255.0 再更改 NAT 设置网关为 192.168.88.2<br>使用 vim 编辑 &#x2F;etc&#x2F;sysconfig&#x2F;network-scripts&#x2F;ifcfg-ens33 文件<br>将 BOOTPROTO&#x3D;”dhcp” 更改为 VOOTPROTO&#x3D;”tatic”<br>在文件后面追加:<br>IPADDR&#x3D;”192.168.88.130” (IP 地址)<br>NETMASK&#x3D;”225.225.225.0” (子网掩码固定 255.255.255.0)<br>GATEWAY&#x3D;”192.168.88.2” (网关和 Vmware 虚拟网络编辑器中设置一致)<br>DNS1&#x3D;”192.168.88.2” (DNS1 设置为网关即可)<br><img src="/./images/image-7.png" alt="Alt text"></p>
 <p>——————–分隔符——————–</p>
 <h1 id="网络请求和下载"><a href="#网络请求和下载" class="headerlink" title="网络请求和下载"></a>网络请求和下载</h1><h2 id="ping-command"><a href="#ping-command" class="headerlink" title="ping command"></a>ping command</h2><p>通过 ping 命令 检查指定的网络服务器是否额联通状态<br><code>语法: ping [-c num] ip 或 主机名</code><br>选项 -c 检查的次数 不使用 -c 选项 将无限次数持续检查<br>参数 IP 或 主机名 被检查的服务器的 ip 地址或主机名地址<br>例: ping baidu.com</p>
 <h2 id="wget-command"><a href="#wget-command" class="headerlink" title="wget command"></a>wget command</h2><p>wget 是非交互式的文件下载器 可以在命令行内下载网络文件<br><code>语法: wget [-b] url</code><br>选项 -b 后台下载 会将日志写入到当前工作目录的 wget-log 文件<br>参数 url 下载链接</p>
@@ -113,7 +113,7 @@
 <p><em>公认端口: 1~1023 通常用于一些系统内置或知名程序的预留使用 如 SSH 服务的 22 端口 HTTPS 服务的 443 端口 非特殊需要 不要占用这个范围的端口</em></p>
 <p><em>注册端口: 1024~49151 通常可以随意使用 用于松散的绑定一些程序\服务</em></p>
 <p><em>动态端口 49152~65535 通常不会固定绑定程序 二十当程序对外进行网络链接时 用于临时使用</em></p>
-<p><img src="/blog/./images/image-8.png"></p>
+<p><img src="/./images/image-8.png"></p>
 <h2 id="nmap-command"><a href="#nmap-command" class="headerlink" title="nmap command"></a>nmap command</h2><p>通过 nmap 命令查看端口的占用情况<br>使用 nmap 命令 安装 nmap: yum install nmap<br><code>语法: nmap 被查看的 IP 地址</code></p>
 <h2 id="netstat-command"><a href="#netstat-command" class="headerlink" title="netstat command"></a>netstat command</h2><p>通过 netstat 命令 查看指定端口的占用情况<br><code>语法: netstat -anp | grep 端口号</code><br>安装 netstat: yum install net-tools</p>
 <p>——————–分隔符——————–</p>
@@ -134,7 +134,7 @@
 <li><p>第四、五行: Kib Mem: 物理内存 total: 总量 free: 空闲 used: 使用 buff&#x2F;cache: buff 和 cache 占用<br>KibSwap: 虚拟内存(交换空间) total: 总量 free: 空闲 used: 使用 buff&#x2F;cache: buff 和 cache 占用</p>
 </li>
 </ol>
-<p><img src="/blog/./images/image-9.png" alt="Alt text"></p>
+<p><img src="/./images/image-9.png" alt="Alt text"></p>
 <h3 id="介绍-1"><a href="#介绍-1" class="headerlink" title="介绍"></a>介绍</h3><p>PID: 进程 id<br>USER: 进程所属用户<br>PR: 进程优先级 越小越高<br>NI: 表示高优先级 正表示低优先级<br>VIRT: 进程使用虚拟内存 单位 KB<br>RES: 进程使用物理内存 单位 KB<br>SHR: 进程使用共享内存 单位 KB<br>S: 进程状态 (S 休眠 R 运行 Z 僵死状态 N 负数优先级 I 空闲状态)<br>%CPU: 进程占用 CPU 率<br>%MEM: 进程占用内存率<br>TIME+: 进程使用 CPU 时间总计 单位 10 毫秒<br>COMMAND: 进程的命令或名称或程序文件路径</p>
 <h3 id="选项"><a href="#选项" class="headerlink" title="选项"></a>选项</h3><p>选项                    功能</p>
 <p>-p              只显示某个进程的信息<br>-d              设置刷新时间 默认是 5s<br>-c              显示产生进程的完整命令 默认是进程名<br>-n              指定刷新次数 比如 top -n 3 刷新输出 3 次 后退出<br>-b              以非交互非全屏模式运行 以批次的方式执行 top 一般配合 -n 指定输出几个统计信息 将输出重定向到指定文件 如 top -b -n 3 &gt; &#x2F;tmp&#x2F;top.tmp<br>-i              不显示任何闲置 (idle) 或无用 (zombie) 的进程<br>-u              查找特定用户启动的进程</p>
@@ -209,8 +209,26 @@
       </tags>
   </entry>
   <entry>
+    <title>About</title>
+    <url>/2024/04/01/about/</url>
+    <content><![CDATA[<h2 id="关于我"><a href="#关于我" class="headerlink" title="关于我"></a>关于我</h2><p>Who I’m i?</p>
+<table><tr><td bgcolor=skyBlue>A developer, living all over the world.</td></tr></table>
+
+<hr>
+<p>名前: 劉子旭<br>住居: 中国河南<br>Github: <a href="https://github.com/groming/">Groming</a><br>Twitter: <a href="https://twitter.com/li56253842">Groming</a><br>QQ: <a href="https://qm.qq.com/q/kZTTaJuaFa">Penguin</a><br>Telegram:<a href="https://t.me/grayson_puil">GromingPuil</a><br>Wechat: gromingx</p>
+<span id="more"></span>
+<p><img src="/../images/favicon.png"></p>
+]]></content>
+      <categories>
+        <category>about</category>
+      </categories>
+      <tags>
+        <tag>about</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>SQL</title>
-    <url>/blog/2024/03/14/SQL/</url>
+    <url>/2024/03/14/SQL/</url>
     <content><![CDATA[<h1 id="MySQL"><a href="#MySQL" class="headerlink" title="MySQL"></a>MySQL</h1><h1 id="start-and-stop"><a href="#start-and-stop" class="headerlink" title="start and stop"></a>start and stop</h1><h2 id="start"><a href="#start" class="headerlink" title="start"></a>start</h2><figure class="highlight sql"><table><tr><td class="code"><pre><span class="line">net <span class="keyword">start</span> mysql80</span><br></pre></td></tr></table></figure>
 
 <h2 id="stop"><a href="#stop" class="headerlink" title="stop"></a>stop</h2><figure class="highlight sql"><table><tr><td class="code"><pre><span class="line">net stop mysql80</span><br></pre></td></tr></table></figure>
@@ -264,9 +282,9 @@
 
 <p>——————–分隔符——————–</p>
 <h3 id="DDL-表操作-数据类型"><a href="#DDL-表操作-数据类型" class="headerlink" title="DDL 表操作 数据类型"></a>DDL 表操作 数据类型</h3><p>MySQL 主要分为三类数据类型: 数值类型 字符串类型 日期时间类型</p>
-<p><img src="/blog/images/image_1.png" alt="数值类型"></p>
-<p><img src="/blog/images/image_2.png" alt="字符串类型"></p>
-<p><img src="/blog/images/image_3.png" alt="日期类型"></p>
+<p><img src="/images/image_1.png" alt="数值类型"></p>
+<p><img src="/images/image_2.png" alt="字符串类型"></p>
+<p><img src="/images/image_3.png" alt="日期类型"></p>
 <p>——————–分隔符——————–</p>
 <h3 id="DDL-表操作-修改"><a href="#DDL-表操作-修改" class="headerlink" title="DDL 表操作 修改"></a>DDL 表操作 修改</h3><p><code>添加字段</code></p>
 <figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">AlTER</span> <span class="keyword">TABLE</span> 表名 <span class="keyword">ADD</span> 字段名 类型(长度) [COMMENT 注释] [约束];</span><br></pre></td></tr></table></figure>
@@ -314,45 +332,8 @@
       </tags>
   </entry>
   <entry>
-    <title>About</title>
-    <url>/blog/2024/04/01/about/</url>
-    <content><![CDATA[<h2 id="关于我"><a href="#关于我" class="headerlink" title="关于我"></a>关于我</h2><p>Who I’m i?</p>
-<table><tr><td bgcolor=skyBlue>A developer, living all over the world.</td></tr></table>
-
-<hr>
-<p>名前: 劉子旭<br>住居: 中国河南<br>Github: <a href="https://github.com/groming/">Groming</a><br>Twitter: <a href="https://twitter.com/li56253842">Groming</a><br>QQ: <a href="https://qm.qq.com/q/kZTTaJuaFa">Penguin</a><br>Telegram:<a href="https://t.me/grayson_puil">GromingPuil</a><br>Wechat: gromingx</p>
-<span id="more"></span>
-<p><img src="/blog/../images/favicon.png"></p>
-]]></content>
-      <categories>
-        <category>about</category>
-      </categories>
-      <tags>
-        <tag>about</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Blog</title>
-    <url>/blog/2024/04/02/index/</url>
-    <content><![CDATA[<h2 id="Welcome-to-my-Blog"><a href="#Welcome-to-my-Blog" class="headerlink" title="Welcome to my Blog!"></a>Welcome to my Blog!</h2>]]></content>
-      <tags>
-        <tag>Blog</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>gitee踩坑</title>
-    <url>/blog/2024/04/10/gitee%E8%B8%A9%E5%9D%91/</url>
-    <content><![CDATA[]]></content>
-      <categories>
-        <category>技术</category>
-      </categories>
-      <tags>
-        <tag>技术</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>markdown 文字颜色、高亮、字体字号设置</title>
-    <url>/blog/2024/04/03/markdown/</url>
+    <url>/2024/04/03/markdown/</url>
     <content><![CDATA[<h2 id="文字颜色"><a href="#文字颜色" class="headerlink" title="文字颜色"></a>文字颜色</h2><h3 id="写法"><a href="#写法" class="headerlink" title="写法"></a>写法</h3><figure class="highlight css"><table><tr><td class="code"><pre><span class="line">&lt;<span class="attribute">font</span> <span class="attribute">color</span>=<span class="selector-id">#0099ff</span>&gt;<span class="attribute">color</span> <span class="selector-id">#0099ff</span>&lt;/<span class="attribute">font</span>&gt;</span><br><span class="line">&lt;<span class="attribute">font</span> <span class="attribute">color</span>=red&gt;红色&lt;/<span class="attribute">font</span>&gt;</span><br></pre></td></tr></table></figure>
 
 <p><font color=#0099ff>color #0099ff</font><br><font color=red>红色</font></p>
@@ -378,6 +359,25 @@
 
 <h3 id="常用颜色"><a href="#常用颜色" class="headerlink" title="常用颜色"></a>常用颜色</h3><p><font color=maroon>color&#x3D;maroon</font><br><font color=grey>color&#x3D;grey</font><br><font color=silver>color&#x3D;silver</font><br><font color=lightgrey>color&#x3D;lightgrey</font><br><font color=HotPink>color&#x3D;HotPink</font><br><font color=DeepPink>color&#x3D;DeepPink</font><br><font color=VioletRed>color&#x3D;VioletRed</font><br><font color=Purple>color&#x3D;Purple</font><br><font color=navy>color&#x3D;navy</font><br><font color=Blue>color&#x3D;Blue</font><br><font color=DeepSkyBlue>color&#x3D;DeepSkyBlue</font><br><font color=LightSkyBlue>color&#x3D;LightSkyBlue</font><br><font color=aqua>color&#x3D;aqua</font><br><font color=DarkTurquoise>color&#x3D;DarkTurquoise</font><br><font color=LightSeaGreen>color&#x3D;LightSeaGreen</font><br><font color=YellowGreen>color&#x3D;YellowGreen</font><br><font color=LawnGreen>color&#x3D;LawnGreen</font><br><font color=GreenYellow>color&#x3D;GreenYellow</font><br><font color=Yellow>color&#x3D;Yellow</font><br><font color=Tomato>color&#x3D;Tomato</font><br><font color=red>color&#x3D;red</font><br><font color=fuchsia>color&#x3D;fuchsia</font><br><font color=MediumOrchid>color&#x3D;MediumOrchid</font><br><font color=DarkViolet>color&#x3D;DarkViolet</font></p>
 ]]></content>
+      <categories>
+        <category>技术</category>
+      </categories>
+      <tags>
+        <tag>技术</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Blog</title>
+    <url>/2024/04/02/index/</url>
+    <content><![CDATA[<h2 id="Welcome-to-my-Blog"><a href="#Welcome-to-my-Blog" class="headerlink" title="Welcome to my Blog!"></a>Welcome to my Blog!</h2>]]></content>
+      <tags>
+        <tag>Blog</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>gitee踩坑</title>
+    <url>/2024/04/10/gitee%E8%B8%A9%E5%9D%91/</url>
+    <content><![CDATA[]]></content>
       <categories>
         <category>技术</category>
       </categories>
