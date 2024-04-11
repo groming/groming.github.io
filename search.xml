@@ -19,6 +19,41 @@
       </tags>
   </entry>
   <entry>
+    <title>markdown 文字颜色、高亮、字体字号设置</title>
+    <url>/2024/04/03/markdown/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h2 id="文字颜色"><a href="#文字颜色" class="headerlink" title="文字颜色"></a>文字颜色</h2><h3 id="写法"><a href="#写法" class="headerlink" title="写法"></a>写法</h3><figure class="highlight css"><table><tr><td class="code"><pre><span class="line">&lt;<span class="attribute">font</span> <span class="attribute">color</span>=<span class="selector-id">#0099ff</span>&gt;<span class="attribute">color</span> <span class="selector-id">#0099ff</span>&lt;/<span class="attribute">font</span>&gt;</span><br><span class="line">&lt;<span class="attribute">font</span> <span class="attribute">color</span>=red&gt;红色&lt;/<span class="attribute">font</span>&gt;</span><br></pre></td></tr></table></figure>
+
+<p><font color=#0099ff>color #0099ff</font><br><font color=red>红色</font></p>
+<span id="more"></span>
+
+<h3 id="字体字号"><a href="#字体字号" class="headerlink" title="字体字号"></a>字体字号</h3><figure class="highlight css"><table><tr><td class="code"><pre><span class="line">默认字体</span><br><span class="line">&lt;<span class="attribute">font</span> face=&quot;黑体&quot;&gt;黑体&lt;/<span class="attribute">font</span>&gt;</span><br><span class="line">&lt;<span class="attribute">font</span> face=&quot;微软雅黑&quot;&gt;微软雅黑&lt;/<span class="attribute">font</span>&gt;</span><br><span class="line">&lt;<span class="attribute">font</span> face=&quot;STCAIYUN&quot;&gt;我是华文彩云&lt;/<span class="attribute">font</span>&gt;</span><br><span class="line">&lt;<span class="attribute">font</span> size=<span class="number">2</span> face=&quot;黑体&quot;&gt;黑体<span class="number">2</span>号&lt;/<span class="attribute">font</span>&gt;</span><br><span class="line">&lt;<span class="selector-tag">b</span>&gt;&lt;<span class="attribute">font</span> size=<span class="number">6</span> face=&quot;黑体&quot;&gt;加粗&lt;/<span class="attribute">font</span>&gt;&lt;/<span class="selector-tag">b</span>&gt;</span><br><span class="line"></span><br><span class="line">&lt;<span class="attribute">font</span> <span class="attribute">color</span>=red size=<span class="number">6</span> face=&quot;黑体&quot;&gt;红色<span class="number">6</span>号黑体&lt;/<span class="attribute">font</span>&gt;</span><br><span class="line">&lt;<span class="selector-tag">b</span>&gt;&lt;<span class="attribute">font</span> <span class="attribute">color</span>=Blue size=<span class="number">7</span> face=&quot;黑体&quot;&gt;蓝色加粗<span class="number">7</span>号黑体&lt;/<span class="attribute">font</span>&gt;&lt;/<span class="selector-tag">b</span>&gt;</span><br></pre></td></tr></table></figure>
+
+<p>默认字体<br><font face="黑体">黑体</font><br><font face="微软雅黑">微软雅黑</font><br><font face="STCAIYUN">我是华文彩云</font><br><font size=2 face="黑体">黑体2号</font><br><b><font size=6 face="黑体">加粗</font></b></p>
+<p><font color=red size=6 face="黑体">红色6号黑体</font><br><b><font color=Blue size=7 face="黑体">蓝色加粗7号黑体</font></b></p>
+<h3 id="文字居中"><a href="#文字居中" class="headerlink" title="文字居中"></a>文字居中</h3><figure class="highlight css"><table><tr><td class="code"><pre><span class="line">&lt;center&gt;文字居中<span class="number">1</span>&lt;/center&gt;</span><br><span class="line">&lt;<span class="selector-tag">div</span> align=center&gt;文字居中<span class="number">2</span>&lt;/<span class="selector-tag">div</span>&gt;</span><br></pre></td></tr></table></figure>
+<center>文字居中1</center>
+<div align=center>文字居中2</div>
+
+<h3 id="文字加粗"><a href="#文字加粗" class="headerlink" title="文字加粗"></a>文字加粗</h3><figure class="highlight css"><table><tr><td class="code"><pre><span class="line">&lt;<span class="selector-tag">b</span>&gt;加粗&lt;/<span class="selector-tag">b</span>&gt;</span><br><span class="line">&lt;<span class="selector-tag">b</span>&gt;&lt;<span class="attribute">font</span> <span class="attribute">color</span>=Blue size=<span class="number">7</span> face=&quot;黑体&quot;&gt;蓝色加粗<span class="number">7</span>号黑体&lt;/<span class="attribute">font</span>&gt;&lt;/<span class="selector-tag">b</span>&gt;</span><br></pre></td></tr></table></figure>
+
+<p><b>加粗</b><br><b><font color=Blue size=7 face="黑体">蓝色加粗7号黑体</font></b></p>
+<h3 id="文字与代码高亮"><a href="#文字与代码高亮" class="headerlink" title="文字与代码高亮"></a>文字与代码高亮</h3><figure class="highlight css"><table><tr><td class="code"><pre><span class="line">==highlight <span class="number">1</span>==</span><br><span class="line">&lt;<span class="selector-tag">mark</span>&gt;highlight <span class="number">2</span>&lt;/<span class="selector-tag">mark</span>&gt;</span><br><span class="line">&lt;<span class="selector-tag">span</span> style=&quot;<span class="attribute">background-color</span>:<span class="built_in">rgb</span>(<span class="number">100</span>,<span class="number">200</span>,<span class="number">200</span>,<span class="number">0.5</span>)<span class="string">&quot;&gt;highlight 3&lt;/span&gt;</span></span><br><span class="line"><span class="string">```code 1```</span></span><br><span class="line"><span class="string">`code 2`</span></span><br></pre></td></tr></table></figure>
+
+<p>&#x3D;&#x3D;highlight 1&#x3D;&#x3D;<br><mark>highlight 2</mark><br><span style="background-color:rgb(100,200,200,0.5)">highlight 3</span><br><code>code 1</code><br><code>code 2</code></p>
+<h3 id="文字底色"><a href="#文字底色" class="headerlink" title="文字底色"></a>文字底色</h3><figure class="highlight css"><table><tr><td class="code"><pre><span class="line">&lt;<span class="selector-tag">table</span>&gt;&lt;<span class="selector-tag">tr</span>&gt;&lt;<span class="selector-tag">td</span> bgcolor=PowderBlue&gt;这里的背景色是：PowderBlue，  十六进制颜色值： <span class="selector-id">#B0E0E6</span>，rgb(<span class="number">176</span>, <span class="number">224</span>, <span class="number">230</span>)&lt;/<span class="selector-tag">td</span>&gt;&lt;/<span class="selector-tag">tr</span>&gt;&lt;/<span class="selector-tag">table</span>&gt;</span><br></pre></td></tr></table></figure>
+
+<table><tr><td bgcolor=PowderBlue>这里的背景色是：PowderBlue，  十六进制颜色值： #B0E0E6，rgb(176, 224, 230)</td></tr></table>
+
+<h3 id="常用颜色"><a href="#常用颜色" class="headerlink" title="常用颜色"></a>常用颜色</h3><p><font color=maroon>color&#x3D;maroon</font><br><font color=grey>color&#x3D;grey</font><br><font color=silver>color&#x3D;silver</font><br><font color=lightgrey>color&#x3D;lightgrey</font><br><font color=HotPink>color&#x3D;HotPink</font><br><font color=DeepPink>color&#x3D;DeepPink</font><br><font color=VioletRed>color&#x3D;VioletRed</font><br><font color=Purple>color&#x3D;Purple</font><br><font color=navy>color&#x3D;navy</font><br><font color=Blue>color&#x3D;Blue</font><br><font color=DeepSkyBlue>color&#x3D;DeepSkyBlue</font><br><font color=LightSkyBlue>color&#x3D;LightSkyBlue</font><br><font color=aqua>color&#x3D;aqua</font><br><font color=DarkTurquoise>color&#x3D;DarkTurquoise</font><br><font color=LightSeaGreen>color&#x3D;LightSeaGreen</font><br><font color=YellowGreen>color&#x3D;YellowGreen</font><br><font color=LawnGreen>color&#x3D;LawnGreen</font><br><font color=GreenYellow>color&#x3D;GreenYellow</font><br><font color=Yellow>color&#x3D;Yellow</font><br><font color=Tomato>color&#x3D;Tomato</font><br><font color=red>color&#x3D;red</font><br><font color=fuchsia>color&#x3D;fuchsia</font><br><font color=MediumOrchid>color&#x3D;MediumOrchid</font><br><font color=DarkViolet>color&#x3D;DarkViolet</font></p>
+]]></content>
+      <categories>
+        <category>技术</category>
+      </categories>
+      <tags>
+        <tag>技术</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Linux 基础</title>
     <url>/2023/09/17/Linux/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="Linux-命令基础"><a href="#Linux-命令基础" class="headerlink" title="Linux 命令基础"></a>Linux 命令基础</h1><p>Linux 中命令的通用格式:<br>command [-options] [parameter]</p>
@@ -227,22 +262,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Music</title>
-    <url>/2024/04/02/index/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script>
-    <div id="aplayer-BiUIrZZB" class="aplayer aplayer-tag-marker meting-tag-marker"
-         data-id="9697004054" data-server="netease" data-type="playlist" data-mode="circulation" data-autoplay="false" data-mutex="true" data-listmaxheight="340px" data-preload="auto" data-theme="#555"
-    ></div>
-
-]]></content>
-      <categories>
-        <category>music</category>
-      </categories>
-      <tags>
-        <tag>music</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>SQL</title>
     <url>/2024/03/14/SQL/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="MySQL"><a href="#MySQL" class="headerlink" title="MySQL"></a>MySQL</h1><h1 id="start-and-stop"><a href="#start-and-stop" class="headerlink" title="start and stop"></a>start and stop</h1><h2 id="start"><a href="#start" class="headerlink" title="start"></a>start</h2><figure class="highlight sql"><table><tr><td class="code"><pre><span class="line">net <span class="keyword">start</span> mysql80</span><br></pre></td></tr></table></figure>
@@ -348,38 +367,19 @@
       </tags>
   </entry>
   <entry>
-    <title>markdown 文字颜色、高亮、字体字号设置</title>
-    <url>/2024/04/03/markdown/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h2 id="文字颜色"><a href="#文字颜色" class="headerlink" title="文字颜色"></a>文字颜色</h2><h3 id="写法"><a href="#写法" class="headerlink" title="写法"></a>写法</h3><figure class="highlight css"><table><tr><td class="code"><pre><span class="line">&lt;<span class="attribute">font</span> <span class="attribute">color</span>=<span class="selector-id">#0099ff</span>&gt;<span class="attribute">color</span> <span class="selector-id">#0099ff</span>&lt;/<span class="attribute">font</span>&gt;</span><br><span class="line">&lt;<span class="attribute">font</span> <span class="attribute">color</span>=red&gt;红色&lt;/<span class="attribute">font</span>&gt;</span><br></pre></td></tr></table></figure>
+    <title>Music</title>
+    <url>/2024/04/02/index/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script>
+    <div id="aplayer-rixyZcMJ" class="aplayer aplayer-tag-marker meting-tag-marker"
+         data-id="9697004054" data-server="netease" data-type="playlist" data-mode="circulation" data-autoplay="false" data-mutex="true" data-listmaxheight="340px" data-preload="auto" data-theme="#555"
+    ></div>
 
-<p><font color=#0099ff>color #0099ff</font><br><font color=red>红色</font></p>
-<span id="more"></span>
-
-<h3 id="字体字号"><a href="#字体字号" class="headerlink" title="字体字号"></a>字体字号</h3><figure class="highlight css"><table><tr><td class="code"><pre><span class="line">默认字体</span><br><span class="line">&lt;<span class="attribute">font</span> face=&quot;黑体&quot;&gt;黑体&lt;/<span class="attribute">font</span>&gt;</span><br><span class="line">&lt;<span class="attribute">font</span> face=&quot;微软雅黑&quot;&gt;微软雅黑&lt;/<span class="attribute">font</span>&gt;</span><br><span class="line">&lt;<span class="attribute">font</span> face=&quot;STCAIYUN&quot;&gt;我是华文彩云&lt;/<span class="attribute">font</span>&gt;</span><br><span class="line">&lt;<span class="attribute">font</span> size=<span class="number">2</span> face=&quot;黑体&quot;&gt;黑体<span class="number">2</span>号&lt;/<span class="attribute">font</span>&gt;</span><br><span class="line">&lt;<span class="selector-tag">b</span>&gt;&lt;<span class="attribute">font</span> size=<span class="number">6</span> face=&quot;黑体&quot;&gt;加粗&lt;/<span class="attribute">font</span>&gt;&lt;/<span class="selector-tag">b</span>&gt;</span><br><span class="line"></span><br><span class="line">&lt;<span class="attribute">font</span> <span class="attribute">color</span>=red size=<span class="number">6</span> face=&quot;黑体&quot;&gt;红色<span class="number">6</span>号黑体&lt;/<span class="attribute">font</span>&gt;</span><br><span class="line">&lt;<span class="selector-tag">b</span>&gt;&lt;<span class="attribute">font</span> <span class="attribute">color</span>=Blue size=<span class="number">7</span> face=&quot;黑体&quot;&gt;蓝色加粗<span class="number">7</span>号黑体&lt;/<span class="attribute">font</span>&gt;&lt;/<span class="selector-tag">b</span>&gt;</span><br></pre></td></tr></table></figure>
-
-<p>默认字体<br><font face="黑体">黑体</font><br><font face="微软雅黑">微软雅黑</font><br><font face="STCAIYUN">我是华文彩云</font><br><font size=2 face="黑体">黑体2号</font><br><b><font size=6 face="黑体">加粗</font></b></p>
-<p><font color=red size=6 face="黑体">红色6号黑体</font><br><b><font color=Blue size=7 face="黑体">蓝色加粗7号黑体</font></b></p>
-<h3 id="文字居中"><a href="#文字居中" class="headerlink" title="文字居中"></a>文字居中</h3><figure class="highlight css"><table><tr><td class="code"><pre><span class="line">&lt;center&gt;文字居中<span class="number">1</span>&lt;/center&gt;</span><br><span class="line">&lt;<span class="selector-tag">div</span> align=center&gt;文字居中<span class="number">2</span>&lt;/<span class="selector-tag">div</span>&gt;</span><br></pre></td></tr></table></figure>
-<center>文字居中1</center>
-<div align=center>文字居中2</div>
-
-<h3 id="文字加粗"><a href="#文字加粗" class="headerlink" title="文字加粗"></a>文字加粗</h3><figure class="highlight css"><table><tr><td class="code"><pre><span class="line">&lt;<span class="selector-tag">b</span>&gt;加粗&lt;/<span class="selector-tag">b</span>&gt;</span><br><span class="line">&lt;<span class="selector-tag">b</span>&gt;&lt;<span class="attribute">font</span> <span class="attribute">color</span>=Blue size=<span class="number">7</span> face=&quot;黑体&quot;&gt;蓝色加粗<span class="number">7</span>号黑体&lt;/<span class="attribute">font</span>&gt;&lt;/<span class="selector-tag">b</span>&gt;</span><br></pre></td></tr></table></figure>
-
-<p><b>加粗</b><br><b><font color=Blue size=7 face="黑体">蓝色加粗7号黑体</font></b></p>
-<h3 id="文字与代码高亮"><a href="#文字与代码高亮" class="headerlink" title="文字与代码高亮"></a>文字与代码高亮</h3><figure class="highlight css"><table><tr><td class="code"><pre><span class="line">==highlight <span class="number">1</span>==</span><br><span class="line">&lt;<span class="selector-tag">mark</span>&gt;highlight <span class="number">2</span>&lt;/<span class="selector-tag">mark</span>&gt;</span><br><span class="line">&lt;<span class="selector-tag">span</span> style=&quot;<span class="attribute">background-color</span>:<span class="built_in">rgb</span>(<span class="number">100</span>,<span class="number">200</span>,<span class="number">200</span>,<span class="number">0.5</span>)<span class="string">&quot;&gt;highlight 3&lt;/span&gt;</span></span><br><span class="line"><span class="string">```code 1```</span></span><br><span class="line"><span class="string">`code 2`</span></span><br></pre></td></tr></table></figure>
-
-<p>&#x3D;&#x3D;highlight 1&#x3D;&#x3D;<br><mark>highlight 2</mark><br><span style="background-color:rgb(100,200,200,0.5)">highlight 3</span><br><code>code 1</code><br><code>code 2</code></p>
-<h3 id="文字底色"><a href="#文字底色" class="headerlink" title="文字底色"></a>文字底色</h3><figure class="highlight css"><table><tr><td class="code"><pre><span class="line">&lt;<span class="selector-tag">table</span>&gt;&lt;<span class="selector-tag">tr</span>&gt;&lt;<span class="selector-tag">td</span> bgcolor=PowderBlue&gt;这里的背景色是：PowderBlue，  十六进制颜色值： <span class="selector-id">#B0E0E6</span>，rgb(<span class="number">176</span>, <span class="number">224</span>, <span class="number">230</span>)&lt;/<span class="selector-tag">td</span>&gt;&lt;/<span class="selector-tag">tr</span>&gt;&lt;/<span class="selector-tag">table</span>&gt;</span><br></pre></td></tr></table></figure>
-
-<table><tr><td bgcolor=PowderBlue>这里的背景色是：PowderBlue，  十六进制颜色值： #B0E0E6，rgb(176, 224, 230)</td></tr></table>
-
-<h3 id="常用颜色"><a href="#常用颜色" class="headerlink" title="常用颜色"></a>常用颜色</h3><p><font color=maroon>color&#x3D;maroon</font><br><font color=grey>color&#x3D;grey</font><br><font color=silver>color&#x3D;silver</font><br><font color=lightgrey>color&#x3D;lightgrey</font><br><font color=HotPink>color&#x3D;HotPink</font><br><font color=DeepPink>color&#x3D;DeepPink</font><br><font color=VioletRed>color&#x3D;VioletRed</font><br><font color=Purple>color&#x3D;Purple</font><br><font color=navy>color&#x3D;navy</font><br><font color=Blue>color&#x3D;Blue</font><br><font color=DeepSkyBlue>color&#x3D;DeepSkyBlue</font><br><font color=LightSkyBlue>color&#x3D;LightSkyBlue</font><br><font color=aqua>color&#x3D;aqua</font><br><font color=DarkTurquoise>color&#x3D;DarkTurquoise</font><br><font color=LightSeaGreen>color&#x3D;LightSeaGreen</font><br><font color=YellowGreen>color&#x3D;YellowGreen</font><br><font color=LawnGreen>color&#x3D;LawnGreen</font><br><font color=GreenYellow>color&#x3D;GreenYellow</font><br><font color=Yellow>color&#x3D;Yellow</font><br><font color=Tomato>color&#x3D;Tomato</font><br><font color=red>color&#x3D;red</font><br><font color=fuchsia>color&#x3D;fuchsia</font><br><font color=MediumOrchid>color&#x3D;MediumOrchid</font><br><font color=DarkViolet>color&#x3D;DarkViolet</font></p>
 ]]></content>
       <categories>
-        <category>技术</category>
+        <category>music</category>
       </categories>
       <tags>
-        <tag>技术</tag>
+        <tag>music</tag>
       </tags>
   </entry>
 </search>
